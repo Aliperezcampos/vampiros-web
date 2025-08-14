@@ -1,0 +1,46 @@
+Perfecto, Guillermo. Aquí tienes una estructura tipo **temario narrativo** para tu sitio web sobre el mito vampírico, desde sus orígenes hasta la actualidad. Está pensada para que cada sección tenga su propio bloque visual y textual, ideal para un diseño minimalista con scroll fluido:
+
+---
+
+## 🧛‍♂️ Temario Narrativo: La Historia del Mito Vampírico
+
+### 1. 🩸 Introducción
+- ¿Qué es un vampiro?
+- Por qué fascinan: entre el miedo, el deseo y la inmortalidad
+
+### 2. 🌑 Orígenes del mito
+- Creencias antiguas sobre muertos vivientes (Mesopotamia, Grecia, Roma)
+- Figuras precursoras: Lamia, Empusa, Lilith
+
+### 3. ⚰️ Vampiros en el folklore europeo
+- Europa del Este: Nosferatu, Strigoi, Moroi
+- Prácticas funerarias y miedo al regreso de los muertos
+- Vlad Tepes y la figura histórica detrás del mito
+
+### 4. 📜 Literatura gótica y romántica
+- “El Vampiro” de Polidori (1819)
+- “Carmilla” de Le Fanu (1872)
+- “Drácula” de Bram Stoker (1897): consolidación del arquetipo
+
+### 5. 🎬 Vampiros en el cine y la cultura pop
+- Nosferatu (1922) y el expresionismo alemán
+- Hammer Films y el vampiro seductor
+- Entrevista con el Vampiro, Blade, Underworld
+
+### 6. 🧬 El vampiro moderno
+- Vampiros en series y videojuegos
+- Reinterpretaciones: vampiros éticos, científicos, adolescentes
+- Estética gótica y su influencia en moda y música
+
+### 7. 🧠 Análisis simbólico y psicológico
+- El vampiro como metáfora: sexualidad, poder, enfermedad
+- El deseo de trascender la muerte
+- El vampiro como espejo cultural
+
+### 8. 🕸️ Conclusión y legado
+- ¿Por qué sigue vigente el mito?
+- El vampiro como figura mutante y eterna
+
+---
+
+¿Quieres que prepare el contenido base para la primera sección (“Orígenes del mito”) con texto narrativo y estilo visual? También puedo ayudarte a estructurar cada sección como componente HTML reutilizable. ¿Avanzamos con eso?

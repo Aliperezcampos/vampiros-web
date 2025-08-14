@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000, #2e003e);
+  font-family: 'Crimson Text', serif;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3.5em;
+  color: #b30000;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.bat {
+  width: 120px;
+  margin: 0 auto 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  color: #f5f5f5;
+  background-color: #660000;
+  border: 2px solid #b30000;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px #330000, inset 0 -5px 15px #990000;
+  border-radius: 8px;
+}
+
+/* Capa sangrante */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background: radial-gradient(circle at 50% 0%, #b30000 0%, transparent 70%);
+  filter: url(#blood-drip);
+  animation: bleed 3s infinite ease-in-out;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes bleed {
+  0% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(-10px); }
+}
+
+.btn:hover {
+  background-color: #990000;
+}
