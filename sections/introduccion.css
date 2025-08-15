@@ -1,0 +1,225 @@
+/* Tipografía y colores base */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000, #2b0014);
+  color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Encabezados con estilo gótico */
+h1, h2, h3 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #b30000;
+  text-shadow: 2px 2px 6px #000;
+  margin-bottom: 10px;
+}
+
+h2 {
+  border-bottom: 1px solid #660000;
+  padding-bottom: 5px;
+}
+
+/* Subtítulo */
+.subtitulo {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Sección de encabezado */
+.intro-header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background: url('assets/images/castillo-luna.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+/* Texto introductorio */
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-size: 1.1em;
+  background-color: rgba(40, 0, 40, 0.4);
+  border-left: 4px solid #b30000;
+}
+
+/* Bloques de contenido */
+.bloque {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px 20px;
+  background-color: rgba(30, 0, 30, 0.5);
+  border-left: 4px solid #660000;
+  box-shadow: 0 0 15px rgba(90, 0, 0, 0.6);
+}
+
+/* Listas de rasgos vampíricos */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+li::before {
+  content: "🩸 ";
+  color: #b30000;
+}
+
+/* Botones interactivos */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #660000;
+  color: #f5f5f5;
+  border: 2px solid #b30000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #990000;
+  cursor: pointer;
+}
+
+/* Dato vampírico destacado */
+.dato-vampirico {
+  background-color: #330000;
+  padding: 15px;
+  margin-top: 20px;
+  font-style: italic;
+  border-left: 4px solid #b30000;
+  box-shadow: 0 0 10px rgba(150, 0, 0, 0.4);
+}
+
+/* Galería de vampiros icónicos */
+.galeria {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.galeria figure {
+  text-align: center;
+  max-width: 150px;
+}
+
+.galeria img {
+  width: 100%;
+  border: 4px solid #5a0a0a;
+  box-shadow: 0 0 15px rgba(150, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Encuesta simple */
+.encuesta {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.encuesta input {
+  margin-right: 8px;
+}
+
+/* Cierre con cita */
+.cierre {
+  text-align: center;
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #f5f5f5;
+  background-color: #5a0a0a;
+  padding: 15px;
+  border-left: 4px solid #b30000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Curiosidades vampíricas */
+.curiosidades {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(60, 0, 60, 0.3);
+  border-left: 4px solid #b30000;
+}
+
+.curiosidades ul li {
+  margin-bottom: 10px;
+}
+
+/* Comentarios del usuario */
+.comentarios {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border: 2px solid #660000;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #999;
+}
+
+button.btn {
+  margin-top: 10px;
+}
+
+.imagen-central img,
+.imagen-comparativa img,
+.imagen-mapa img,
+.imagen-cierre img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+  border: 4px solid #5a0a0a;
+  box-shadow: 0 0 15px rgba(150, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Efecto al pasar el cursor */
+.imagen-central img:hover,
+.imagen-comparativa img:hover,
+.imagen-mapa img:hover,
+.imagen-cierre img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(200, 0, 0, 0.8);
+}
