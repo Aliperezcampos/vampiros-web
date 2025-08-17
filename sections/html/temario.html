@@ -6,21 +6,10 @@
   <title>Temario Vampírico</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/temario.css">
-  <style>
-    /* Animación de desvanecimiento */
-    .fade-out {
-      animation: fadeOut 1s forwards;
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-    } 
-  </style>
 </head>
+
 <body>
+    <button class="back-button" onclick="goBack()">←</button>
     <h1>Temario del Mito Vampírico</h1>
     <p class="mensaje-instruccion"><span id="texto-escritura"></span></p>
   <div class="temario-botones">
@@ -33,6 +22,27 @@
     <a href="simbolismo.html" class="tema-boton">🧠 Análisis simbólico: sexualidad, poder, enfermedad</a>
     <a href="conclusion.html" class="tema-boton">🕸️ Conclusión: legado y vigencia del mito</a>
   </div>
+
+    <script>
+    // Botón de regresar
+    function goBack() {
+      document.body.classList.add("fade-out"); // activa desvanecimiento
+      setTimeout(() => {
+        window.history.back(); // vuelve a la página anterior
+      }, 1000);
+    }
+
+    // Desvanecimiento en enlaces normales
+    document.querySelectorAll(".tema-boton").forEach(enlace => {
+      enlace.addEventListener("click", function(evento) {
+        evento.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 1000);
+      });
+    });
+  </script>
 
   <script>
   const texto = "🕯️ Da clic en un tema para conocer más sobre el mito vampírico.";

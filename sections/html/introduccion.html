@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/introduccion.css">
   </head>
+
   <body>
+    
+    <button class="back-button" onclick="goBack()">←</button>
+    
     <header class="intro-header">
       <h1>El Encanto de los Vampiros: Mitos, Miedos y Fascinación</h1>
       <p class="subtitulo">Descubre qué define a un vampiro y por qué sigue cautivando nuestra imaginación.</p>
@@ -114,5 +119,16 @@
       <textarea placeholder="Comparte tu opinión o tu vampiro favorito..."></textarea>
       <button class="btn">Enviar</button>
     </footer>
+
+    <script>
+    // Botón de regresar
+    function goBack() {
+      document.body.classList.add("fade-out"); // activa desvanecimiento
+      setTimeout(() => {
+        window.history.back(); // vuelve a la página anterior
+      }, 1000);
+    }
+  </script>
+  
   </body>
 </html>

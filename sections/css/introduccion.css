@@ -6,6 +6,28 @@ body {
   color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
+  animation: fadeIn 2s ease-out;
+}
+
+.back-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: radial-gradient(circle at center, #a00000 20%, #400000 90%); /* rojo sangre brillante al oscuro */
+  color: #fffdf7; /* blanco hueso */
+  border: 3px solid #ff0000; /* borde rojo brillante para destacar */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-family: "Cinzel Decorative", serif; /* fuente gótica visible */
+  cursor: pointer;
+  text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b; /* brillo rojo intenso */
+  box-shadow: 0 0 20px rgba(255,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.9);
+  z-index: 9999; /* siempre visible */
 }
 
 /* Encabezados con estilo gótico */
@@ -207,7 +229,7 @@ button.btn {
 .imagen-cierre img {
   display: block;
   margin: 20px auto;
-  max-width: 30%;
+  max-width: 70%;
   height: auto;
   border: 4px solid #5a0a0a;
   box-shadow: 0 0 15px rgba(150, 0, 0, 0.6);
@@ -224,3 +246,14 @@ button.btn {
   box-shadow: 0 0 25px rgba(200, 0, 0, 0.8);
 }
 
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
