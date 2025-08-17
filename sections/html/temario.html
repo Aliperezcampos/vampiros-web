@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temario Vampírico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/temario.css">
+  <style>
+    /* Animación de desvanecimiento */
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    } 
+  </style>
+</head>
+<body>
+    <h1>Temario del Mito Vampírico</h1>
+    <p class="mensaje-instruccion"><span id="texto-escritura"></span></p>
+  <div class="temario-botones">
+    <a href="introduccion.html" class="tema-boton">🩸 Introducción: ¿Qué es un vampiro y por qué fascina?</a>
+    <a href="origenes.html" class="tema-boton">🌑 Orígenes del mito: Lamia, Lilith, muertos vivientes antiguos</a>
+    <a href="folklore.html" class="tema-boton">⚰️ Folklore europeo: Nosferatu, Strigoi, Vlad Tepes</a>
+    <a href="literatura.html" class="tema-boton">📜 Literatura gótica: Polidori, Carmilla, Drácula</a>
+    <a href="cine.html" class="tema-boton">🎬 Cine y cultura pop: Nosferatu, Hammer, Blade</a>
+    <a href="moderno.html" class="tema-boton">🧬 Vampiro moderno: series, videojuegos, reinterpretaciones</a>
+    <a href="simbolismo.html" class="tema-boton">🧠 Análisis simbólico: sexualidad, poder, enfermedad</a>
+    <a href="conclusion.html" class="tema-boton">🕸️ Conclusión: legado y vigencia del mito</a>
+  </div>
+
+  <script>
+  const texto = "🕯️ Da clic en un tema para conocer más sobre el mito vampírico.";
+  const destino = document.getElementById("texto-escritura");
+  let i = 0;
+
+  function escribir() {
+    if (i < texto.length) {
+      destino.textContent += texto.charAt(i);
+      i++;
+      setTimeout(escribir, 50); // velocidad de escritura
+    }
+  }
+
+  escribir();
+</script>
+
+</body>
+</html>

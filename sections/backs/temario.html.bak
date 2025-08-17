@@ -23,8 +23,8 @@
 <body>
   <div class="temario-container" id="temario">
     <h1>Temario del Mito Vampírico</h1>
-    <ul>
-      <li><a href="introduccion.html" class="tema-link">🩸 Introducción: ¿Qué es un vampiro y por qué fascina?</a></li>
+    <ul class="temario-list">
+      <li><a href="introduccion.html" class="tema-boton">🩸 Introducción: ¿Qué es un vampiro y por qué fascina?</a></li>
       <li><a href="origenes.html" class="tema-link">🌑 Orígenes del mito: Lamia, Lilith, muertos vivientes antiguos</a></li>
       <li><a href="folklore.html" class="tema-link">⚰️ Folklore europeo: Nosferatu, Strigoi, Vlad Tepes</a></li>
       <li><a href="literatura.html" class="tema-link">📜 Literatura gótica: Polidori, Carmilla, Drácula</a></li>

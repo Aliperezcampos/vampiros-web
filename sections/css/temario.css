@@ -1,0 +1,72 @@
+body {
+  background: linear-gradient(to bottom, #0a0000, #2e003e);
+  font-family: 'Crimson Text', serif;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3em;
+  color: #b30000;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px #000;
+  animation: fadeIn 2s ease-out;
+}
+
+.mensaje-instruccion {
+  font-size: 1.2em;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+  font-family: 'Crimson Text', serif;
+  text-shadow: 1px 1px 4px #000;
+}
+
+#texto-escritura::after {
+  content: '|';
+  animation: parpadeoCursor 1s infinite;
+}
+
+@keyframes parpadeoCursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.temario-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  animation: fadeIn 2.5s ease-out;
+}
+
+.tema-boton {
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #f5f5f5;
+  background-color: #330000;
+  border: 2px solid #660000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(150, 0, 0, 0.6), inset 0 -5px 10px #990000;
+  font-family: 'Cinzel Decorative', serif;
+  animation: fadeIn 1.5s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+

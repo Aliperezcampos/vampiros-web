@@ -207,7 +207,7 @@ button.btn {
 .imagen-cierre img {
   display: block;
   margin: 20px auto;
-  max-width: 90%;
+  max-width: 30%;
   height: auto;
   border: 4px solid #5a0a0a;
   box-shadow: 0 0 15px rgba(150, 0, 0, 0.6);
@@ -223,3 +223,4 @@ button.btn {
   transform: scale(1.03);
   box-shadow: 0 0 25px rgba(200, 0, 0, 0.8);
 }
+

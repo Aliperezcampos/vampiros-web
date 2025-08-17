@@ -69,3 +69,55 @@ li:hover {
   }
 }
 
+.temario-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.tema-boton {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  background: radial-gradient(circle at top left, #2c0f1e, #1a0a13);
+  color: #f8f0f5;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 2px solid #6e1a3a;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #6e1a3a;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: entradaGotica 1s ease-out forwards;
+  animation-delay: var(--delay, 0s);
+  filter: url(#blood-drip);
+  transition: filter 0.5s ease;
+}
+
+/* Animación gótica */
+@keyframes entradaGotica {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Asignar delay progresivo para efecto escalonado */
+.tema-boton:nth-child(1) { --delay: 0.1s; }
+.tema-boton:nth-child(2) { --delay: 0.2s; }
+.tema-boton:nth-child(3) { --delay: 0.3s; }
+.tema-boton:nth-child(4) { --delay: 0.4s; }
+.tema-boton:nth-child(5) { --delay: 0.5s; }
+.tema-boton:nth-child(6) { --delay: 0.6s; }
+.tema-boton:nth-child(7) { --delay: 0.7s; }
+.tema-boton:nth-child(8) { --delay: 0.8s; }
+
+.sangre-wrapper {
+  display: inline-block;
+  filter: url(#blood-drip);
+}
+
