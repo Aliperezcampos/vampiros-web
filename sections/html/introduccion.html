@@ -25,6 +25,22 @@
       </div>
     </section>
 
+    <section class="video-vampirico">
+      <h2 class="video-titulo">🕯️ LOS VAMPIROS... SÍ EXISTEN</h2>
+      <div class="video-marco">
+        <iframe 
+          src="https://www.youtube.com/embed/WF4WK3UWCLM?start=1" 
+          title="Video vampírico"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-cita">
+        🎥 Fuente: <a href="https://www.youtube.com/watch?v=WF4WK3UWCLM" target="_blank" rel="noopener noreferrer">
+        Canal de YouTube <em>El Grimorio</em></a>. Publicado el 29 Octubre 2020.
+      </p>
+    </section>
+
     <section class="bloque">
       <h2>¿Qué Define a un Vampiro?</h2>
       <ul>
@@ -36,7 +52,7 @@
       <div class="imagen-comparativa">
         <img src="../../assets/images/vampire-types.png" alt="Comparativa de tipos de vampiros">
       </div>
-      <a href="cuestionario.html" class="btn">¿Qué tipo de vampiro serías?</a>
+      <a href="trivia.html" class="btn">¿Qué tipo de vampiro serías?</a>
     </section>
 
     <section class="bloque">
@@ -102,7 +118,7 @@
         <img src="../../assets/images/bat-1.png" alt="bat-1">
       </div>
       <blockquote>“Los vampiros son el espejo de nuestros deseos más oscuros.” – Anne Rice</blockquote>
-      <a href="folklore.html" class="btn">Explora el Origen del Mito Vampírico</a>
+      <a href="../html/folklore.html" class="btn">Explora el Origen del Mito Vampírico</a>
     </section>
 
     <section class="curiosidades">
@@ -114,11 +130,21 @@
       </ul>
     </section>
 
-    <footer class="comentarios">
+  <footer class="comentarios">
+    <form action="https://formsubmit.co/aliperezcampos@gmail.com" method="POST">
       <h3>¿Qué te fascina de los vampiros?</h3>
-      <textarea placeholder="Comparte tu opinión o tu vampiro favorito..."></textarea>
-      <button class="btn">Enviar</button>
-    </footer>
+      <textarea name="mensaje" placeholder="Comparte tu opinión o tu vampiro favorito..." required></textarea>
+
+      <!-- Redirección tras enviar -->
+      <input type="hidden" name="_next" value="../html/gracias.html">
+
+      <!-- Desactiva captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </footer>
+
 
     <script>
     // Botón de regresar

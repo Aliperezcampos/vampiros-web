@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Qué tipo de vampiro serías?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b0606;
+      color: #e0d6d6;
+      font-family: 'Cinzel', serif;
+      padding: 2rem;
+      background-image: radial-gradient(circle at top, #1a0f0f 0%, #000000 100%);
+    }
+
+    .back-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: radial-gradient(circle at center, #a00000 20%, #400000 90%); /* rojo sangre brillante al oscuro */
+    color: #fffdf7; /* blanco hueso */
+    border: 3px solid #ff0000; /* borde rojo brillante para destacar */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    font-family: "Cinzel Decorative", serif; /* fuente gótica visible */
+    cursor: pointer;
+    text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b; /* brillo rojo intenso */
+    box-shadow: 0 0 20px rgba(255,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.9);
+    z-index: 9999; /* siempre visible */
+    }
+
+    .trivia-vampiro {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    border: 3px solid #ff0303;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #5a0f0f;
+    background-color: #1a0f0f;
+    }
+
+    .trivia-titulo {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 8px #8b0000;
+    }
+
+    label {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+
+    button {
+      background-color: #2c0d0d;
+      color: #e0d6d6;
+      border: 2px solid #8b0000;
+      padding: 0.6rem 1.2rem;
+      font-family: 'Cinzel', serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 5px #8b0000;
+      margin-top: 1.5rem;
+      display: block;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #4a0f0f;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #b22222;
+    }
+
+    .resultado-vampiro {
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      text-align: center;
+      color: #f4eaea;
+      text-shadow: 0 0 4px #5a0f0f;
+    }
+
+    .resultado-vampiro.mostrar {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="goBack()">←</button>
+
+  <section class="trivia-vampiro">
+    <h2 class="trivia-titulo">🩸 ¿Qué tipo de vampiro serías?</h2>
+    <form id="vampiroForm">
+      <label>1. ¿Qué te atrae más?</label>
+      <input type="radio" name="pregunta1" value="elegante"> La elegancia y el misterio<br>
+      <input type="radio" name="pregunta1" value="feral"> La fuerza y el instinto<br>
+      <input type="radio" name="pregunta1" value="moderno"> La tecnología y el anonimato<br>
+
+      <label>2. ¿Cuál sería tu refugio ideal?</label>
+      <input type="radio" name="pregunta2" value="castillo"> Un castillo antiguo en ruinas<br>
+      <input type="radio" name="pregunta2" value="catacumbas"> Catacumbas ocultas bajo la ciudad<br>
+      <input type="radio" name="pregunta2" value="penthouse"> Un penthouse oscuro con vista nocturna<br>
+
+      <label>3. ¿Cómo te alimentas?</label>
+      <input type="radio" name="pregunta3" value="ritual"> Con rituales y elegancia<br>
+      <input type="radio" name="pregunta3" value="caceria"> Cazando en la oscuridad<br>
+      <input type="radio" name="pregunta3" value="sintetico"> Sangre sintética o donada<br>
+
+      <button type="button" onclick="calcularVampiro()">Descubre tu tipo 🦇</button>
+    </form>
+
+    <div id="resultado" class="resultado-vampiro"></div>
+  </section>
+
+  <script>
+    function calcularVampiro() {
+      const p1 = document.querySelector('input[name="pregunta1"]:checked')?.value;
+      const p2 = document.querySelector('input[name="pregunta2"]:checked')?.value;
+      const p3 = document.querySelector('input[name="pregunta3"]:checked')?.value;
+
+      const resultadoDiv = document.getElementById("resultado");
+      resultadoDiv.classList.remove("mostrar");
+
+      if (!p1 || !p2 || !p3) {
+        resultadoDiv.innerHTML = "🕯️ Por favor responde todas las preguntas.";
+        resultadoDiv.classList.add("mostrar");
+        return;
+      }
+
+      let tipo = "";
+
+      if (p1 === "elegante" && p2 === "castillo" && p3 === "ritual") {
+        tipo = "Vampiro aristocrático 🦇: refinado, inmortal y seductor.";
+      } else if (p1 === "feral" || p2 === "catacumbas" || p3 === "caceria") {
+        tipo = "Vampiro salvaje 🩸: acechas en las sombras, guiado por el instinto.";
+      } else if (p1 === "moderno" || p2 === "penthouse" || p3 === "sintetico") {
+        tipo = "Vampiro urbano 🧛‍♂️: adaptado al siglo XXI, discreto y letal.";
+      } else {
+        tipo = "Vampiro híbrido 🕸️: una mezcla única de tradición y modernidad.";
+      }
+
+      resultadoDiv.innerHTML = `<strong>${tipo}</strong>`;
+      setTimeout(() => resultadoDiv.classList.add("mostrar"), 100);
+    }
+  </script>
+
+    <script>
+        // Botón de regresar
+        function goBack() {
+        document.body.classList.add("fade-out"); // activa desvanecimiento
+        setTimeout(() => {
+            window.history.back(); // vuelve a la página anterior
+        }, 1000);
+        }
+    </script>
+</body>
+</html>

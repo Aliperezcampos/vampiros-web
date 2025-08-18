@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Creación del Vampiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Cinzel', serif;
+      background-color: #0b0606;
+      color: #e0d6d6;
+      overflow: hidden;
+    }
+
+    .back-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: radial-gradient(circle at center, #a00000 20%, #400000 90%); /* rojo sangre brillante al oscuro */
+    color: #fffdf7; /* blanco hueso */
+    border: 3px solid #ff0000; /* borde rojo brillante para destacar */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    font-family: "Cinzel Decorative", serif; /* fuente gótica visible */
+    cursor: pointer;
+    text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b; /* brillo rojo intenso */
+    box-shadow: 0 0 20px rgba(255,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.9);
+    z-index: 9999; /* siempre visible */
+    }
+
+    .pantalla-vampiro {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, #1a0f0f 0%, #000000 100%);
+    }
+
+    .pantalla-vampiro img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      filter: grayscale(100%) contrast(120%);
+    }
+
+    .titulo-vampiro {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.3rem;
+      text-align: center;
+      color: #f4eaea;
+      text-shadow: 0 0 10px #5a0f0f;
+      padding: 1rem;
+      background-color: rgba(20, 10, 10, 0.5);
+      border: 3px solid #5a0f0f;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">←</button>
+
+  <div class="pantalla-vampiro">
+    <img src="../../assets/images/vampire-kiss.jpg" alt="La creación del vampiro">
+    <div class="titulo-vampiro">🩸 La Creación del Vampiro</div>
+  </div>
+
+    <script>
+    // Botón de regresar
+    function goBack() {
+      document.body.classList.add("fade-out"); // activa desvanecimiento
+      setTimeout(() => {
+        window.history.back(); // vuelve a la página anterior
+      }, 1000);
+    }
+    </script>
+
+</body>
+</html>
