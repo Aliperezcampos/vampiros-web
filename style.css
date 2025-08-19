@@ -122,6 +122,64 @@ p {
     0 0 15px rgba(0, 0, 0, 0.8);
 }
 
+/* Modal oscuro */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 0, 0, 0.95);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Imagen ampliada */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  border: 3px solid #990000;
+  box-shadow: 0 0 40px #660000;
+  animation: zoomIn 1.5s ease;
+  animation: fogFade .8s ease-out;
+  animation: gothicSpin 0.6s ease-out;
+}
+
+/* Texto debajo */
+.caption {
+  text-align: center;
+  color: #f5f5f5;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #b30000;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
 @keyframes bleed {
   0% { transform: translateY(-10px); }
   50% { transform: translateY(10px); }
@@ -139,6 +197,30 @@ p {
   }
   100% {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fogFade {
+  0% {
+    opacity: 0;
+    filter: blur(10px) brightness(0.5);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes gothicSpin {
+  0% {
+    transform: rotate(-10deg) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
     opacity: 1;
   }
 }

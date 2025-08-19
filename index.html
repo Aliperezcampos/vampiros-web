@@ -15,15 +15,43 @@
     </defs>
   </svg>
 </head>
+
 <body>
-<div class="overlay">
-    <h1>La Historia del Mito Vampírico</h1>
-    <div class="gallery-center">
-      <img src="assets/images/witch_2.jpg" alt="Reliquia Vampírica" class="gallery-img">
-    </div>
-    <p>Un recorrido por la evolución y el simbolismo de los vampiros, desde sus orígenes en el folklore hasta su impacto en la cultura contemporánea.</p>
-    <img src="assets/images/bat-1.png" alt="Murciélago" class="bat">
-    <a href="sections/html/temario.html" class="btn">Entrar al Sitio</a>
+  <div class="overlay">
+      <h1>La Historia del Mito Vampírico</h1>
+      <div class="gallery-center">
+        <img src="assets/images/witch_2.jpg" alt="Reliquia Vampírica" class="gallery-img" onclick="openModal(this)">
+      </div>
+      <!-- Modal oculto -->
+      <div id="vampireModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div class="caption">Reliquia Vampírica</div>
+      </div>
+      <p>Un recorrido por la evolución y el simbolismo de los vampiros, desde sus orígenes en el folklore hasta su impacto en la cultura contemporánea.</p>
+      <img src="assets/images/bat-1.png" alt="Murciélago" class="bat">
+      <a href="sections/html/temario.html" class="btn">Entrar al Sitio</a>
   </div>
+
+  <script>
+    function openModal(img) {
+    const modal = document.getElementById("vampireModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    }
+
+    function closeModal() {
+    document.getElementById("vampireModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+  const modal = document.getElementById("vampireModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>

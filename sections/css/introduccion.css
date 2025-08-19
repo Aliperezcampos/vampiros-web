@@ -13,9 +13,12 @@ body {
   position: fixed;
   top: 15px;
   left: 15px;
-  background: radial-gradient(circle at center, #a00000 20%, #400000 90%); /* rojo sangre brillante al oscuro */
-  color: #fffdf7; /* blanco hueso */
-  border: 3px solid #ff0000; /* borde rojo brillante para destacar */
+  background: radial-gradient(circle at center, #a00000 20%, #400000 90%);
+  /* rojo sangre brillante al oscuro */
+  color: #fffdf7;
+  /* blanco hueso */
+  border: 3px solid #ff0000;
+  /* borde rojo brillante para destacar */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -23,15 +26,20 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 52px;
-  font-family: "Cinzel Decorative", serif; /* fuente gótica visible */
+  font-family: "Cinzel Decorative", serif;
+  /* fuente gótica visible */
   cursor: pointer;
-  text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b; /* brillo rojo intenso */
-  box-shadow: 0 0 20px rgba(255,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.9);
-  z-index: 9999; /* siempre visible */
+  text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b;
+  /* brillo rojo intenso */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  /* siempre visible */
 }
 
 /* Encabezados con estilo gótico */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Cinzel Decorative', serif;
   color: #b30000;
   text-shadow: 2px 2px 6px #000;
@@ -61,7 +69,8 @@ h2 {
 
 .video-marco {
   position: relative;
-  padding-top: 56.25%; /* Proporción 16:9 */
+  padding-top: 56.25%;
+  /* Proporción 16:9 */
   border: 4px solid #f70101;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(90, 15, 15, 0.6);
@@ -288,8 +297,107 @@ textarea {
     opacity: 0;
     transform: translateY(20px) scale(0.98);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal oscuro */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 0, 0, 0.95);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Imagen ampliada */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  border: 3px solid #990000;
+  box-shadow: 0 0 40px #660000;
+  animation: zoomIn 1.5s ease;
+  animation: fogFade .8s ease-out;
+  animation: gothicSpin 0.6s ease-out;
+}
+
+/* Texto debajo */
+#caption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #b30000;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Imagen ampliada */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  border: 3px solid #990000;
+  box-shadow: 0 0 40px #660000;
+  animation: zoomIn 1.5s ease;
+  animation: fogFade .8s ease-out;
+  animation: gothicSpin 0.6s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fogFade {
+  0% {
+    opacity: 0;
+    filter: blur(10px) brightness(0.5);
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes gothicSpin {
+  0% {
+    transform: rotate(-10deg) scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
   }
 }

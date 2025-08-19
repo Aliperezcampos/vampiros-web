@@ -1,134 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Encanto de los Vampiros</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/introduccion.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Encanto de los Vampiros</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/introduccion.css">
+</head>
 
-  <body>
-    
-    <button class="back-button" onclick="goBack()">←</button>
-    
-    <header class="intro-header">
-      <h1>El Encanto de los Vampiros: Mitos, Miedos y Fascinación</h1>
-      <p class="subtitulo">Descubre qué define a un vampiro y por qué sigue cautivando nuestra imaginación.</p>
-    </header>
+<body>
 
-    <section class="intro-text">
-      <p>En la penumbra de la noche, los vampiros acechan: criaturas que beben sangre, desafían la muerte y seducen con su misterio. Nacidos en leyendas antiguas, han evolucionado de monstruos temidos a héroes románticos. ¿Qué los hace tan irresistibles?</p>
-      <div class="imagen-central">
-        <img src="../../assets/images/vampire-silhouette.png" alt="Silueta vampírica bajo la luna">
-      </div>
-    </section>
+  <button class="back-button" onclick="goBack()">←</button>
+  <header class="intro-header">
+    <h1>El Encanto de los Vampiros: Mitos, Miedos y Fascinación</h1>
+    <p class="subtitulo">Descubre qué define a un vampiro y por qué sigue cautivando nuestra imaginación.</p>
+  </header>
+  <section class="intro-text">
+    <p>En la penumbra de la noche, los vampiros acechan: criaturas que beben sangre, desafían la muerte y seducen con su
+      misterio. Nacidos en leyendas antiguas, han evolucionado de monstruos temidos a héroes románticos. ¿Qué los hace
+      tan irresistibles?</p>
+    <div class="imagen-central">
+      <img src="../../assets/images/vampire-silhouette.png" alt="Vampiros" class="gallery-img"
+        onclick="openModal(this)">
+    </div>
+    <!-- Modal oculto -->
+    <div id="vampireModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg">
+      <div id="caption"></div>
+    </div>
 
-    <section class="video-vampirico">
-      <h2 class="video-titulo">🕯️ LOS VAMPIROS... SÍ EXISTEN</h2>
-      <div class="video-marco">
-        <iframe 
-          src="https://www.youtube.com/embed/WF4WK3UWCLM?start=1" 
-          title="Video vampírico"
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="video-cita">
-        🎥 Fuente: <a href="https://www.youtube.com/watch?v=WF4WK3UWCLM" target="_blank" rel="noopener noreferrer">
+  </section>
+  <section class="video-vampirico">
+    <h2 class="video-titulo">🕯️ LOS VAMPIROS... SÍ EXISTEN</h2>
+    <div class="video-marco">
+      <iframe src="https://www.youtube.com/embed/WF4WK3UWCLM?start=1" title="Video vampírico" frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="video-cita">
+      🎥 Fuente: <a href="https://www.youtube.com/watch?v=WF4WK3UWCLM" target="_blank" rel="noopener noreferrer">
         Canal de YouTube <em>El Grimorio</em></a>. Publicado el 29 Octubre 2020.
-      </p>
-    </section>
-
-    <section class="bloque">
-      <h2>¿Qué Define a un Vampiro?</h2>
-      <ul>
-        <li><strong>Alimentación:</strong> Sangre como fuente de vida.</li>
-        <li><strong>Inmortalidad:</strong> Eternidad a cambio de una maldición.</li>
-        <li><strong>Dualidad:</strong> Monstruo y seductor a la vez.</li>
-      </ul>
-      <p>Desde los strigoi rumanos hasta los jiangshi chinos, el vampiro adopta formas distintas pero siempre conserva su esencia: una criatura entre la vida y la muerte, entre el deseo y el horror.</p>
-      <div class="imagen-comparativa">
-        <img src="../../assets/images/vampire-types.png" alt="Comparativa de tipos de vampiros">
-      </div>
-      <a href="trivia.html" class="btn">¿Qué tipo de vampiro serías?</a>
-    </section>
-
-    <section class="bloque">
-      <h2>Raíces del Mito</h2>
-      <p>Los vampiros nacen del miedo humano a la muerte, la enfermedad y lo desconocido. En la Europa medieval, los entierros prematuros y la porfiria alimentaron supersticiones. La religión los convirtió en símbolos del pecado y lo profano.</p>
-      <div class="imagen-mapa">
-        <img src="../../assets/images/vampire-map.png" alt="Mapa de orígenes vampíricos">
-      </div>
-      <div class="dato-vampirico">🧛 Dato Vampírico: En el siglo XVIII, los aldeanos desenterraban cuerpos para clavarles estacas, temiendo que fueran vampiros.</div>
-    </section>
-
-    <section class="bloque">
-      <h2>¿Por Qué Nos Fascinan?</h2>
-      <p>Los vampiros encarnan deseos prohibidos: poder, sensualidad, inmortalidad. En la cultura pop, han pasado de monstruos como Nosferatu a figuras complejas como Louis o Edward. Reflejan nuestras contradicciones más profundas.</p>
-      <div class="galeria">
-        <figure>
-          <img src="../../assets/images/lugosi.jpg" alt="Bela Lugosi">
-          <figcaption>Bela Lugosi (Drácula)</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/lord-ruthven.jpg" alt="Lord-Ruthven.jpg">
-          <figcaption>Lord Ruthven</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/varney.jpg" alt="Varney The Vampire">
-          <figcaption>Varney</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/carmilla.jpg" alt="Carmilla">
-          <figcaption>Carmilla</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/nosferatu.jpg" alt="Nosferatu">
-          <figcaption>Nosferatu</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/vlad-tepes.png" alt="Vlad Tepes">
-          <figcaption>Vlad Tepes</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/lamia.jpg" alt="Lamia">
-          <figcaption>Lamia</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/lucy-westenra.jpg" alt="Lucy Westenra">
-          <figcaption>Lucy Westenra</figcaption>
-        </figure>
-        <figure>
-          <img src="../../assets/images/akasha.jpg" alt="Akasha">
-          <figcaption>Akasha</figcaption>
-        </figure>
-      </div>
-      <form class="encuesta">
-        <label>¿Qué te atrae más de los vampiros?</label><br>
-        <input type="radio" name="atraccion" value="misterio"> Misterio<br>
-        <input type="radio" name="atraccion" value="poder"> Poder<br>
-        <input type="radio" name="atraccion" value="romanticismo"> Romanticismo<br>
-      </form>
-    </section>
-
-    <section class="cierre">
-      <div class="imagen-cierre">
-        <img src="../../assets/images/bat-1.png" alt="bat-1">
-      </div>
-      <blockquote>“Los vampiros son el espejo de nuestros deseos más oscuros.” – Anne Rice</blockquote>
-      <a href="../html/folklore.html" class="btn">Explora el Origen del Mito Vampírico</a>
-    </section>
-
-    <section class="curiosidades">
-      <h3>Curiosidades Vampíricas</h3>
-      <ul>
-        <li>🧛 En el folclore, contar semillas podía detener a un vampiro.</li>
-        <li>🩸 La palabra “vampiro” apareció por primera vez en el siglo XVIII en Europa.</li>
-        <li>🕯️ Algunos rituales incluían colocar monedas en la boca del muerto.</li>
-      </ul>
-    </section>
+    </p>
+  </section>
+  <section class="bloque">
+    <h2>¿Qué Define a un Vampiro?</h2>
+    <ul>
+      <li><strong>Alimentación:</strong> Sangre como fuente de vida.</li>
+      <li><strong>Inmortalidad:</strong> Eternidad a cambio de una maldición.</li>
+      <li><strong>Dualidad:</strong> Monstruo y seductor a la vez.</li>
+    </ul>
+    <p>Desde los strigoi rumanos hasta los jiangshi chinos, el vampiro adopta formas distintas pero siempre conserva su
+      esencia: una criatura entre la vida y la muerte, entre el deseo y el horror.</p>
+    <div class="imagen-comparativa">
+      <img src="../../assets/images/vampire-types.png" alt="Comparativa de tipos de vampiros" class="gallery-img"
+        onclick="openModal(this)">
+    </div>
+    <a href="trivia.html" class="btn">¿Qué tipo de vampiro serías?</a>
+  </section>
+  <section class="bloque">
+    <h2>Raíces del Mito</h2>
+    <p>Los vampiros nacen del miedo humano a la muerte, la enfermedad y lo desconocido. En la Europa medieval, los
+      entierros prematuros y la porfiria alimentaron supersticiones. La religión los convirtió en símbolos del pecado y
+      lo profano.</p>
+    <div class="imagen-mapa">
+      <img src="../../assets/images/vampire-map.png" alt="Mapa de orígenes vampíricos" class="gallery-img"
+        onclick="openModal(this)">>
+    </div>
+    <div class="dato-vampirico">🧛 Dato Vampírico: En el siglo XVIII, los aldeanos desenterraban cuerpos para clavarles
+      estacas, temiendo que fueran vampiros.</div>
+  </section>
+  <section class="bloque">
+    <h2>¿Por Qué Nos Fascinan?</h2>
+    <p>Los vampiros encarnan deseos prohibidos: poder, sensualidad, inmortalidad. En la cultura pop, han pasado de
+      monstruos como Nosferatu a figuras complejas como Louis o Edward. Reflejan nuestras contradicciones más profundas.
+    </p>
+    <div class="galeria">
+      <figure>
+        <img src="../../assets/images/lugosi.jpg" alt="Bela Lugosi" class="gallery-img" onclick="openModal(this)">
+        <figcaption>Bela Lugosi (Drácula)</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/lord-ruthven.jpg" alt="Lord Ruthven" class="gallery-img"
+          onclick="openModal(this)">
+        <figcaption>Lord Ruthven</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/varney.jpg" alt="Varney The Vampire" class="gallery-img"
+          onclick="openModal(this)">
+        <figcaption>Varney</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/carmilla.jpg" alt="Carmilla" class="gallery-img" onclick="openModal(this)">
+        <figcaption>Carmilla</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/nosferatu.jpg" alt="Nosferatu" class="gallery-img" onclick="openModal(this)">
+        <figcaption>Nosferatu</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/vlad-tepes.png" alt="Vlad Tepes" class="gallery-img" onclick="openModal(this)">
+        <figcaption>Vlad Tepes</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/lamia.jpg" alt="Lamia" class="gallery-img" onclick="openModal(this)">
+        <figcaption>Lamia</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/lucy-westenra.jpg" alt="Lucy Westenra" class="gallery-img"
+          onclick="openModal(this)">
+        <figcaption>Lucy Westenra</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/akasha.jpg" alt="Akasha" class="gallery-img" onclick="openModal(this)">
+        <figcaption>Akasha</figcaption>
+      </figure>
+    </div>
+    <form class="encuesta">
+      <label>¿Qué te atrae más de los vampiros?</label><br>
+      <input type="radio" name="atraccion" value="misterio"> Misterio<br>
+      <input type="radio" name="atraccion" value="poder"> Poder<br>
+      <input type="radio" name="atraccion" value="romanticismo"> Romanticismo<br>
+    </form>
+  </section>
+  <section class="cierre">
+    <div class="imagen-cierre">
+      <img src="../../assets/images/bat-1.png" alt="Murcielago Hierro" class="gallery-img" onclick="openModal(this)">
+    </div>
+    <blockquote>“Los vampiros son el espejo de nuestros deseos más oscuros.” – Anne Rice</blockquote>
+    <a href="../html/folklore.html" class="btn">Explora el Origen del Mito Vampírico</a>
+  </section>
+  <section class="curiosidades">
+    <h3>Curiosidades Vampíricas</h3>
+    <ul>
+      <li>🧛 En el folclore, contar semillas podía detener a un vampiro.</li>
+      <li>🩸 La palabra “vampiro” apareció por primera vez en el siglo XVIII en Europa.</li>
+      <li>🕯️ Algunos rituales incluían colocar monedas en la boca del muerto.</li>
+    </ul>
+  </section>
 
   <footer class="comentarios">
     <form action="https://formsubmit.co/aliperezcampos@gmail.com" method="POST">
@@ -146,7 +158,7 @@
   </footer>
 
 
-    <script>
+  <script>
     // Botón de regresar
     function goBack() {
       document.body.classList.add("fade-out"); // activa desvanecimiento
@@ -155,6 +167,29 @@
       }, 1000);
     }
   </script>
-  
-  </body>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById("vampireModal");
+      const modalImg = document.getElementById("modalImg");
+      const caption = document.getElementById("caption"); // el div del captio
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      caption.innerText = img.alt; // toma el texto del alt de la imagen
+    }
+
+    function closeModal() {
+      document.getElementById("vampireModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("vampireModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
 </html>
