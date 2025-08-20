@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temario Vampírico</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../css/temario.css">
 </head>
 
 <body>
-    <button class="back-button" onclick="goBack()">←</button>
-    <h1>Temario del Mito Vampírico</h1>
-    <p class="mensaje-instruccion"><span id="texto-escritura"></span></p>
+  <button class="back-button" onclick="goBack()">←</button>
+  <h1>Temario del Mito Vampírico</h1>
+  <p class="mensaje-instruccion"><span id="texto-escritura"></span></p>
   <div class="temario-botones">
     <a href="introduccion.html" class="tema-boton">🩸 Introducción: ¿Qué es un vampiro y por qué fascina?</a>
     <a href="origenes.html" class="tema-boton">🌑 Orígenes del mito: Lamia, Lilith, muertos vivientes antiguos</a>
@@ -23,7 +25,7 @@
     <a href="conclusion.html" class="tema-boton">🕸️ Conclusión: legado y vigencia del mito</a>
   </div>
 
-    <script>
+  <script>
     // Botón de regresar
     function goBack() {
       document.body.classList.add("fade-out"); // activa desvanecimiento
@@ -34,7 +36,7 @@
 
     // Desvanecimiento en enlaces normales
     document.querySelectorAll(".tema-boton").forEach(enlace => {
-      enlace.addEventListener("click", function(evento) {
+      enlace.addEventListener("click", function (evento) {
         evento.preventDefault();
         document.body.classList.add("fade-out");
         setTimeout(() => {
@@ -45,20 +47,21 @@
   </script>
 
   <script>
-  const texto = "🕯️ Da clic en un tema para conocer más sobre el mito vampírico.";
-  const destino = document.getElementById("texto-escritura");
-  let i = 0;
+    const texto = "🕯️ Da clic en un tema para conocer más sobre el mito vampírico.";
+    const destino = document.getElementById("texto-escritura");
+    let i = 0;
 
-  function escribir() {
-    if (i < texto.length) {
-      destino.textContent += texto.charAt(i);
-      i++;
-      setTimeout(escribir, 50); // velocidad de escritura
+    function escribir() {
+      if (i < texto.length) {
+        destino.textContent += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 50); // velocidad de escritura
+      }
     }
-  }
 
-  escribir();
-</script>
+    escribir();
+  </script>
 
 </body>
+
 </html>
