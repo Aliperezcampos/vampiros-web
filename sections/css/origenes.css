@@ -1,0 +1,208 @@
+/* Estilos generales y tipografía */
+:root {
+    --color-dark-bg: #0b020c;
+    --color-secondary-bg: #1c0516;
+    --color-primary-text: #e0d6d6;
+    --color-accent: #b30000;
+    --color-accent-light: #ff3b3b;
+    --font-gothic: 'Cinzel Decorative', serif;
+    --font-body: 'Crimson Text', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, var(--color-dark-bg));
+    color: var(--color-primary-text);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    text-rendering: optimizeLegibility;
+    transition: background 1s ease-in-out;
+}
+
+body.fade-out {
+    background: linear-gradient(to bottom, var(--color-dark-bg), #000000);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Botón de regresar */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: radial-gradient(circle at center, var(--color-accent) 20%, #400000 90%);
+    color: var(--color-primary-text);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+    text-shadow: 2px 2px 6px #000, 0 0 10px var(--color-accent-light);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), inset 0 0 8px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Encabezado y navegación */
+header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--color-accent);
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-family: var(--font-gothic);
+    font-size: 2.8rem;
+    color: var(--color-accent);
+    text-shadow: 2px 2px 8px #000;
+    letter-spacing: 2px;
+    margin: 1;
+    line-height: 1.5;
+}
+
+header p {
+    font-style: italic;
+    color: #a0a0a0;
+    font-size: 1.3rem;
+    margin: 10px 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--color-accent);
+    line-height: 1.8;
+    text-decoration: none;
+    font-family: var(--font-gothic);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--color-accent-light);
+    transition: width 0.3s ease;
+}
+
+/* Contenido principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: var(--color-secondary-bg);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-left: 3px solid var(--color-accent);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+section h2,
+article h3 {
+    font-family: var(--font-gothic);
+    color: var(--color-accent);
+    text-shadow: 1px 1px 4px #000;
+    border-bottom: 1px solid rgba(179, 0, 0, 0.5);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+p {
+    font-family: var(--font-body);
+    text-align: justify;
+}
+
+strong {
+    color: var(--color-accent-light);
+    font-weight: bold;
+}
+
+/* Imágenes */
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 4px solid var(--color-accent);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #ccc;
+    font-size: 0.9em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #6a6a6a;
+    border-top: 1px solid var(--color-accent);
+    margin-top: 40px;
+}
+
+/* Estilo base para todos los botones de lectura */
+section button {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+/* Estilo para el botón de "Leer texto" */
+section button:first-of-type {
+    background: radial-gradient(circle at center, var(--color-accent) 20%, #400000 90%);
+    color: var(--color-primary-text);
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 5px #000;
+}
+
+/* Estilo para el botón de "Detener" */
+.detener-btn {
+    background: radial-gradient(circle at center, var(--color-accent) 20%, #400000 90%);
+    color: var(--color-primary-text);
+    border: 2px solid #5a0a0a;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
