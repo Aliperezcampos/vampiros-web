@@ -12,13 +12,21 @@
 </head>
 
 <body>
-
+    <!-- Botón para activar la melodía -->
+  <div class="audio-control">
+    <button id="activar-musica" class="btn-melodia">Reproducir Melodía</button>
+  </div>
+  <!-- Audio oculto -->
+  <audio id="bg-music">
+    <source src="/assets/music/relaxing.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
     <button class="back-button" onclick="goBack()">←</button>
     <header>
         <h1>Orígenes del Mito Vampírico</h1>
         <p>Un recorrido por las primeras figuras y relatos de muertos vivientes.</p>
         <nav>
-            <ul>
+            <ul class="nav-botones">
                 <li><a href="#origenes">·El Mito</a></li>
                 <li><a href="#lamia">·Lamia</a></li>
                 <li><a href="#lilith">·Lilith</a></li>
@@ -76,51 +84,115 @@
         <section id="lamia">
             <h2>Lamia</h2>
             <figure>
-                <img src="ruta/a/tu/imagen-lamia.jpg" alt="Representación de Lamia">
+                <img src="../../assets/images/lamia.jpg" alt="Representación de Lamia">
                 <figcaption>Ejemplo: Pintura de la Lamia, criatura mítica de Grecia.</figcaption>
             </figure>
-            <p id="texto-lamia">Aquí puedes incluir un breve resumen sobre la historia de Lamia en la mitología griega,
-                su transformación
-                y su relación con el vampirismo.</p>
             <button onclick="leerTexto('texto-lamia')">Leer texto</button>
+            <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+            <p id="texto-lamia">
+                <strong>Lamia</strong>, en la <strong>mitología griega</strong>, fue una <strong>reina de Libia</strong>
+                que mantuvo un romance con <strong>Zeus</strong> y tuvo varios hijos.<br><br>
+                <strong>Hera</strong>, esposa de Zeus, al descubrir el affair, <strong>mató o secuestró</strong> a los
+                hijos de Lamia. El <strong>dolor</strong> la volvió <strong>loca</strong>, y comenzó a
+                <strong>devorar</strong> a los hijos de otras personas.<br><br>
+                Transformada por la tragedia, Lamia fue maldita con <strong>insomnio eterno</strong>, incapaz de cerrar
+                los ojos. Su cuerpo adquirió <strong>rasgos serpentinos</strong>: mitad mujer, mitad criatura
+                nocturna.<br><br>
+                Zeus, en un gesto de piedad, le otorgó el don de la <strong>profecía</strong> y la capacidad de
+                <strong>remover y reinsertar sus ojos</strong>.<br><br>
+                En tradiciones posteriores, Lamia se asocia con el <strong>vampirismo</strong>: una
+                <strong>seductora</strong> que atraía a jóvenes para alimentarse de su <strong>carne y sangre</strong>.
+                En textos como <em>La vida de Apolonio de Tiana</em> y <em>El asno de oro</em>, aparece como
+                <strong>bruja que drena sangre</strong>, influenciando <strong>mitos vampíricos</strong> posteriores.
+            </p>
         </section>
 
         <section id="lilith">
             <h2>Lilith</h2>
             <figure>
-                <img src="ruta/a/tu/imagen-lilith.jpg" alt="Representación de Lilith">
+                <img src="../../assets/images/lilith.jpg" alt="Representación de Lilith">
                 <figcaption>Ejemplo: Ilustración de Lilith, figura del folklore judío.</figcaption>
             </figure>
-            <p id="texto-lilith">Aquí puedes hablar sobre la figura de Lilith, su origen en la tradición judía y cómo se
-                asocia con el
-                mito vampírico y otras criaturas de la noche.</p>
             <button onclick="leerTexto('texto-lilith')">Leer texto</button>
+            <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+            <p id="texto-lilith">
+                <strong>Lilith</strong>, en la <strong>tradición judía</strong>, es una figura mitológica que aparece
+                por primera vez en textos como el <em>Alfabeto de Ben Sira</em> (siglo VIII–X). Se la describe como la
+                <strong>primera esposa de Adán</strong>, creada simultáneamente con él a partir del polvo, a diferencia
+                de Eva.<br><br>
+                Debido a su <strong>negativa a someterse</strong> a Adán, Lilith <strong>abandonó el Edén</strong>,
+                desafiando la voluntad divina. Como castigo, fue transformada en un <strong>demonio
+                    nocturno</strong>.<br><br>
+                En el <strong>folclore judío</strong>, se la asocia con la <strong>seducción</strong> y el <strong>daño
+                    a los hombres</strong>, especialmente a los <strong>recién nacidos</strong>, a quienes atacaba para
+                <strong>robarles su vitalidad</strong>.<br><br>
+                Su conexión con el <strong>vampirismo</strong> surge en tradiciones posteriores, particularmente en la
+                <strong>demonología medieval</strong> y el <strong>folclore europeo</strong>. Lilith es descrita como
+                una <strong>succubus</strong> que seduce a hombres durante el sueño para <strong>engendrar criaturas
+                    demoníacas</strong> o <strong>alimentarse de su energía vital</strong>.<br><br>
+                Textos cabalísticos como el <em>Zohar</em> la presentan como una <strong>entidad nocturna</strong> que
+                reina sobre <strong>espíritus malignos</strong> y <strong>criaturas de la noche</strong>, reforzando su
+                imagen como un <strong>ser sobrenatural que drena vida</strong>.<br><br>
+                Esta asociación se amplificó en la <strong>literatura</strong> y el <strong>ocultismo</strong>, donde
+                Lilith se convirtió en un <strong>arquetipo de la femme fatale sobrenatural</strong>, influyendo en
+                representaciones de <strong>vampiros</strong> y <strong>demonios femeninos</strong> en la cultura
+                popular.
+            </p>
+
         </section>
 
         <section id="otros">
             <h2>Otros Muertos Vivientes Antiguos</h2>
-            <p id="texto-otros">Puedes crear subsecciones o párrafos para hablar de otras figuras como el
-                <strong>strigoi</strong>, el
-                <button onclick="leerTexto('texto-otros')">Leer texto</button>
-                <strong>upir</strong>, o cualquier otra que desees incluir. Por ejemplo:
-            </p>
-
             <article>
                 <h3>Strigoi (Folclore Rumano)</h3>
                 <figure>
-                    <img src="ruta/a/tu/imagen-strigoi.jpg" alt="Representación de un Strigoi">
+                    <img src="../../assets/images/strigoi.jpg" alt="Representación de un Strigoi">
                     <figcaption>Ejemplo: Fotografía de un ídolo rumano que se asemeja a un strigoi.</figcaption>
                 </figure>
-                <p>Breve descripción del Strigoi y sus características.</p>
+                <button onclick="leerTexto('texto-strigoi')">Leer texto</button>
+                <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+                <p id="texto-strigoi">
+                    El <strong>Strigoi</strong>, en el <strong>folclore rumano</strong>, es una <strong>criatura
+                        sobrenatural</strong> similar a un <strong>vampiro</strong>, asociada con los <strong>muertos
+                        que regresan</strong> para alimentarse de la vida de los vivos.<br><br>
+                    Puede ser un <strong>espíritu maligno</strong> o un <strong>cadáver reanimado</strong>, a menudo
+                    transformado por una <strong>muerte violenta</strong>, <strong>prácticas de brujería</strong> o
+                    <strong>nacimientos bajo signos astrológicos</strong> (como el martes o viernes).<br><br>
+                    Sus características incluyen <strong>palidez</strong>, <strong>fuerza sobrehumana</strong>,
+                    <strong>transformación en animales</strong> (como perros o murciélagos), y un <strong>deseo de beber
+                        sangre o energía vital</strong>.<br><br>
+                    Se cree que ataca a <strong>familiares</strong> o <strong>aldeanos</strong>, y se les combate con
+                    métodos como <strong>estacas</strong>, <strong>ajo</strong> o <strong>incineración del
+                        cuerpo</strong>.
+                </p>
+
             </article>
 
             <article>
                 <h3>Upir (Mitología Eslava)</h3>
                 <figure>
-                    <img src="ruta/a/tu/imagen-upir.jpg" alt="Representación de un Upir">
+                    <img src="../../assets/images/upir.jpg" alt="Representación de un Upir">
                     <figcaption>Ejemplo: Grabado de un upir eslavo.</figcaption>
                 </figure>
-                <p>Breve descripción del Upir y su rol en el mito vampírico.</p>
+                <button onclick="leerTexto('texto-upir')">Leer texto</button>
+                <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+                <p id="texto-upir">
+                    El <strong>Upir</strong>, también conocido como <strong>Upiór</strong>, es una <strong>criatura
+                        vampírica</strong> del <strong>folclore eslavo</strong>, especialmente en regiones como
+                    <strong>Polonia</strong> y <strong>Rusia</strong>.<br><br>
+                    Se considera un <strong>muerto no enterrado adecuadamente</strong> o alguien que vivió de manera
+                    <strong>impía</strong>, regresando como un <strong>ser maligno</strong> para alimentarse de la
+                    <strong>sangre</strong> o <strong>energía vital</strong> de los vivos.<br><br>
+                    A diferencia de los <strong>vampiros clásicos</strong>, el Upir no siempre tiene <strong>colmillos
+                        prominentes</strong> y puede parecer un <strong>cadáver hinchado o
+                        descompuesto</strong>.<br><br>
+                    Se le atribuyen poderes como <strong>transformarse en animales</strong> (lobo, murciélago) y
+                    <strong>causar enfermedades</strong>.<br><br>
+                    Su rol en el <strong>mito vampírico eslavo</strong> lo convierte en una <strong>figura de terror
+                        rural</strong>, combatida con métodos como <strong>decapitación</strong>,
+                    <strong>cremación</strong> o el uso de <strong>objetos religiosos</strong>.
+                </p>
+
             </article>
         </section>
     </main>
@@ -155,6 +227,14 @@
         function detenerLectura() {
             window.speechSynthesis.cancel();
         }
+
+        document.getElementById("activar-musica").addEventListener("click", function () {
+      const audio = document.getElementById("bg-music");
+      audio.volume = 0.6; // Volumen suave
+      audio.play().catch((error) => {
+        alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
+      });
+    });
     </script>
 
 

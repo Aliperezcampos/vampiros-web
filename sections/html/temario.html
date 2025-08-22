@@ -11,6 +11,17 @@
 </head>
 
 <body>
+  <!-- Botón para activar la melodía -->
+  <div class="audio-control">
+    <button id="activar-musica" class="btn-melodia">Reproducir Melodía</button>
+  </div>
+
+  <!-- Audio oculto -->
+  <audio id="bg-music">
+    <source src="/assets/music/relaxing.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  
   <button class="back-button" onclick="goBack()">←</button>
   <h1>Temario del Mito Vampírico</h1>
   <p class="mensaje-instruccion"><span id="texto-escritura"></span></p>
@@ -60,6 +71,14 @@
     }
 
     escribir();
+
+    document.getElementById("activar-musica").addEventListener("click", function () {
+      const audio = document.getElementById("bg-music");
+      audio.volume = 0.6; // Volumen suave
+      audio.play().catch((error) => {
+        alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
+      });
+    });
   </script>
 
 </body>

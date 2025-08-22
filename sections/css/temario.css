@@ -91,3 +91,50 @@ h1 {
   }
 }
 
+.btn-melodia {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-family: 'Cinzel Decorative', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f5f5f5;
+  background: radial-gradient(circle at center, #660000 20%, #2e0000 90%);
+  border: 2px solid #b30000;
+  border-radius: 10px;
+  box-shadow:
+    0 0 12px rgba(255, 0, 0, 0.5),
+    inset 0 0 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 4px #000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto pulsante espectral */
+.btn-melodia::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+  animation: pulsarMelodia 2.5s infinite ease-in-out;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+@keyframes pulsarMelodia {
+  0% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 0.4; }
+}
+
+@media (max-width: 600px) {
+  .btn-melodia {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}

@@ -7,6 +7,7 @@
     --color-accent-light: #ff3b3b;
     --font-gothic: 'Cinzel Decorative', serif;
     --font-body: 'Crimson Text', serif;
+    --sombra-roja: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 body {
@@ -18,12 +19,6 @@ body {
     line-height: 1.8;
     text-rendering: optimizeLegibility;
     transition: background 1s ease-in-out;
-}
-
-body.fade-out {
-    background: linear-gradient(to bottom, var(--color-dark-bg), #000000);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
 /* Botón de regresar */
@@ -43,7 +38,7 @@ body.fade-out {
     font-size: 32px;
     cursor: pointer;
     text-shadow: 2px 2px 6px #000, 0 0 10px var(--color-accent-light);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), inset 0 0 8px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--sombra-roja);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -65,15 +60,16 @@ h1 {
     color: var(--color-accent);
     text-shadow: 2px 2px 8px #000;
     letter-spacing: 2px;
-    margin: 1;
+    margin: 1rem;
     line-height: 1.5;
 }
 
 header p {
     font-style: italic;
     color: #a0a0a0;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 10px 0 20px;
+    font-family: var(--font-body);
 }
 
 nav ul {
@@ -97,7 +93,8 @@ nav a {
 nav a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
+    left: 0;
     height: 2px;
     display: block;
     margin-top: 5px;
@@ -105,6 +102,8 @@ nav a::after {
     background: var(--color-accent-light);
     transition: width 0.3s ease;
 }
+
+
 
 /* Contenido principal */
 main {
@@ -132,6 +131,7 @@ article h3 {
 }
 
 p {
+    font-size: 1.2rem;
     font-family: var(--font-body);
     text-align: justify;
 }
@@ -178,7 +178,7 @@ footer {
 
 /* Estilo base para todos los botones de lectura */
 section button {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: var(--font-gothic);
     font-size: 0.9rem;
     padding: 10px 20px;
     border-radius: 10px;
@@ -205,4 +205,179 @@ section button:first-of-type {
     color: var(--color-primary-text);
     border: 2px solid #5a0a0a;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+/* Botones espectrales para navegación móvil */
+.nav-botones li a {
+    display: inline-block;
+    padding: 14px 24px;
+    margin: 10px 5px;
+    background: radial-gradient(circle at center, var(--color-accent) 20%, #400000 90%);
+    color: var(--color-primary-text);
+    font-family: var(--font-gothic);
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--color-accent-light);
+    border-radius: 10px;
+    box-shadow: var(--sombra-roja);
+    text-align: center;
+    animation: fadeInBoton 3s ease forwards, pulsarBoton 1s infinite ease-in-out;
+    opacity: 0;
+}
+
+/* Animación de entrada */
+@keyframes fadeInBoton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación pulsante para indicar interactividad */
+@keyframes pulsarBoton {
+    0% {
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+    }
+}
+
+
+/* 📱 Adaptaciones para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    header {
+        padding: 30px 10px 20px;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .back-button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        top: 10px;
+        left: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    section h2,
+    article h3 {
+        font-size: 1.3rem;
+    }
+
+    section button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    figure img {
+        border-width: 2px;
+    }
+
+    figcaption {
+        font-size: 0.8em;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
+
+.audio-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.btn-melodia {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-family: 'Cinzel Decorative', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f5f5f5;
+  background: radial-gradient(circle at center, #660000 20%, #2e0000 90%);
+  border: 2px solid #b30000;
+  border-radius: 10px;
+  box-shadow:
+    0 0 12px rgba(255, 0, 0, 0.5),
+    inset 0 0 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 4px #000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto pulsante espectral */
+.btn-melodia::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+  animation: pulsarMelodia 2.5s infinite ease-in-out;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+@keyframes pulsarMelodia {
+  0% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 0.4; }
+}
+
+@media (max-width: 600px) {
+  .btn-melodia {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
 }

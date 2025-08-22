@@ -12,6 +12,17 @@
 </head>
 
 <body>
+  <!-- Botón para activar la melodía -->
+  <div class="audio-control">
+    <button id="activar-musica" class="btn-melodia">Reproducir Melodía</button>
+  </div>
+
+  <!-- Audio oculto -->
+  <audio id="bg-music">
+    <source src="/assets/music/relaxing.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
   <svg width="0" height="0">
     <defs>
       <filter id="blood-drip">
@@ -25,7 +36,6 @@
     <div class="gallery-center">
       <img src="assets/images/witch_2.jpg" alt="Reliquia Vampírica" class="gallery-img" onclick="openModal(this)">
     </div>
-    <!-- Modal oculto -->
     <div id="vampireModal" class="modal">
       <span class="close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="modalImg">
@@ -34,7 +44,7 @@
     <p>Un recorrido por la evolución y el simbolismo de los vampiros, desde sus orígenes en el folklore hasta su impacto
       en la cultura contemporánea.</p>
     <img src="assets/images/bat-1.png" alt="Murciélago" class="bat">
-    <a href="sections/html/temario.html" class="btn">Entrar al Sitio</a>
+    <a href="sections/html/temario.html" class="btn" id="entrar-btn">Entrar al Sitio</a>
   </div>
 
   <script>
@@ -55,7 +65,41 @@
         modal.style.display = "none";
       }
     }
+
+    document.getElementById("entrar-btn").addEventListener("click", function (event) {
+      event.preventDefault(); // Evita que el enlace se active de inmediato
+
+      const audio = document.getElementById("bg-music");
+      audio.volume = 0.3; // Volumen suave
+      audio.play().then(() => {
+        // Espera breve para que el audio comience antes de redirigir
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 1000); // Puedes ajustar el tiempo si quieres que se escuche más
+      }).catch((error) => {
+        // Si el navegador bloquea el autoplay, redirige sin música
+        window.location.href = this.href;
+      });
+    });
+
+    document.getElementById("activar-musica").addEventListener("click", function () {
+      const audio = document.getElementById("bg-music");
+      audio.volume = 0.6; // Volumen suave
+      audio.play().catch((error) => {
+        alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
+      });
+    });
+
   </script>
+
+  <footer>
+    <p class="credits">
+      Música: "<a href="https://pixabay.com/music/ambient-relaxing-electronic-ambient-music-354471/" target="_blank"
+        rel="noopener noreferrer">Relaxing Electronic Ambient Music</a>" de <a
+        href="https://pixabay.com/users/clavier-music-16027823/" target="_blank" rel="noopener noreferrer">Clavier
+        Music</a>, vía Pixabay.
+    </p>
+  </footer>
 
 </body>
 
