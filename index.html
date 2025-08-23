@@ -19,7 +19,7 @@
 
   <!-- Audio oculto -->
   <audio id="bg-music">
-    <source src="/assets/music/relaxing.mp3" type="audio/mpeg">
+    <source src="assets/music/relaxing.mp3" type="audio/mpeg">
     Tu navegador no soporta audio HTML5.
   </audio>
 
@@ -66,26 +66,10 @@
       }
     }
 
-    document.getElementById("entrar-btn").addEventListener("click", function (event) {
-      event.preventDefault(); // Evita que el enlace se active de inmediato
-
-      const audio = document.getElementById("bg-music");
-      audio.volume = 0.3; // Volumen suave
-      audio.play().then(() => {
-        // Espera breve para que el audio comience antes de redirigir
-        setTimeout(() => {
-          window.location.href = this.href;
-        }, 1000); // Puedes ajustar el tiempo si quieres que se escuche más
-      }).catch((error) => {
-        // Si el navegador bloquea el autoplay, redirige sin música
-        window.location.href = this.href;
-      });
-    });
-
     document.getElementById("activar-musica").addEventListener("click", function () {
       const audio = document.getElementById("bg-music");
-      audio.volume = 0.6; // Volumen suave
-      audio.play().catch((error) => {
+      audio.volume = 0.8;
+      audio.play().catch(() => {
         alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
       });
     });
