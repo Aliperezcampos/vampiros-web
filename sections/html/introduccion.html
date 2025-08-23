@@ -26,6 +26,12 @@
     <h1>El Encanto de los Vampiros: Mitos, Miedos y Fascinación</h1>
     <p class="subtitulo">Descubre qué define a un vampiro y por qué sigue cautivando nuestra imaginación.</p>
   </header>
+  <!-- Modal oculto -->
+  <div id="vampireModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
+  </div>
   <section class="intro-text">
     <p>En la penumbra de la noche, los vampiros acechan: criaturas que beben sangre, desafían la muerte y seducen con su
       misterio. Nacidos en leyendas antiguas, han evolucionado de monstruos temidos a héroes románticos. ¿Qué los hace
@@ -34,13 +40,6 @@
       <img src="../../assets/images/vampire-silhouette.png" alt="Vampiros" class="gallery-img"
         onclick="openModal(this)">
     </div>
-    <!-- Modal oculto -->
-    <div id="vampireModal" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modalImg">
-      <div id="caption"></div>
-    </div>
-
   </section>
   <section class="video-vampirico">
     <h2 class="video-titulo">🕯️ LOS VAMPIROS... SÍ EXISTEN</h2>
@@ -174,9 +173,7 @@
         window.history.back(); // vuelve a la página anterior
       }, 1000);
     }
-  </script>
-
-  <script>
+    
     function openModal(img) {
       const modal = document.getElementById("vampireModal");
       const modalImg = document.getElementById("modalImg");

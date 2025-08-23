@@ -13,14 +13,14 @@
 
 <body>
     <!-- Botón para activar la melodía -->
-  <div class="audio-control">
-    <button id="activar-musica" class="btn-melodia">Reproducir Melodía</button>
-  </div>
-  <!-- Audio oculto -->
-  <audio id="bg-music">
-    <source src="../../assets/music/relaxing.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
-  </audio>
+    <div class="audio-control">
+        <button id="activar-musica" class="btn-melodia">Reproducir Melodía</button>
+    </div>
+    <!-- Audio oculto -->
+    <audio id="bg-music">
+        <source src="../../assets/music/relaxing.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
     <button class="back-button" onclick="goBack()">←</button>
     <header>
         <h1>Orígenes del Mito Vampírico</h1>
@@ -36,10 +36,16 @@
     </header>
 
     <main>
+        <!-- Modal oculto -->
+        <div id="vampireModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
+        </div>
         <section id="origenes">
             <h2>El Origen del Mito Vampírico</h2>
             <figure>
-                <img src="../../assets/images/origenes.jpg" alt="Representación de un vampiro antiguo">
+                <img src="../../assets/images/origenes.jpg" alt="Representación de un vampiro antiguo" onclick="openModal(this)">
                 <figcaption>Hermandad de vampiros bajo la luna, con lobos negros y murciélagos, evocando mitos y poder
                     atemporal.</figcaption>
             </figure>
@@ -84,7 +90,7 @@
         <section id="lamia">
             <h2>Lamia</h2>
             <figure>
-                <img src="../../assets/images/lamia.jpg" alt="Representación de Lamia">
+                <img src="../../assets/images/lamia.jpg" alt="Representación de Lamia" onclick="openModal(this)">
                 <figcaption>Ejemplo: Pintura de la Lamia, criatura mítica de Grecia.</figcaption>
             </figure>
             <button onclick="leerTexto('texto-lamia')">Leer texto</button>
@@ -110,7 +116,7 @@
         <section id="lilith">
             <h2>Lilith</h2>
             <figure>
-                <img src="../../assets/images/lilith.jpg" alt="Representación de Lilith">
+                <img src="../../assets/images/lilith.jpg" alt="Representación de Lilith" onclick="openModal(this)">
                 <figcaption>Ejemplo: Ilustración de Lilith, figura del folklore judío.</figcaption>
             </figure>
             <button onclick="leerTexto('texto-lilith')">Leer texto</button>
@@ -146,7 +152,7 @@
             <article>
                 <h3>Strigoi (Folclore Rumano)</h3>
                 <figure>
-                    <img src="../../assets/images/strigoi.jpg" alt="Representación de un Strigoi">
+                    <img src="../../assets/images/strigoi.jpg" alt="Representación de un Strigoi" onclick="openModal(this)">
                     <figcaption>Ejemplo: Fotografía de un ídolo rumano que se asemeja a un strigoi.</figcaption>
                 </figure>
                 <button onclick="leerTexto('texto-strigoi')">Leer texto</button>
@@ -171,7 +177,7 @@
             <article>
                 <h3>Upir (Mitología Eslava)</h3>
                 <figure>
-                    <img src="../../assets/images/upir.jpg" alt="Representación de un Upir">
+                    <img src="../../assets/images/upir.jpg" alt="Representación de un Upir" onclick="openModal(this)">
                     <figcaption>Ejemplo: Grabado de un upir eslavo.</figcaption>
                 </figure>
                 <button onclick="leerTexto('texto-upir')">Leer texto</button>
@@ -209,6 +215,26 @@
                 window.history.back();
             }, 1000);
         }
+        //Modal
+        function openModal(img) {
+            const modal = document.getElementById("vampireModal");
+            const modalImg = document.getElementById("modalImg");
+            const caption = document.getElementById("caption"); // el div del captio
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            caption.innerText = img.alt; // toma el texto del alt de la imagen
+        }
+
+        function closeModal() {
+            document.getElementById("vampireModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("vampireModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
 
         // Función para la lectura de texto en voz
         function leerTexto(elementId) {
@@ -229,12 +255,12 @@
         }
 
         document.getElementById("activar-musica").addEventListener("click", function () {
-      const audio = document.getElementById("bg-music");
-      audio.volume = 0.6; // Volumen suave
-      audio.play().catch((error) => {
-        alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
-      });
-    });
+            const audio = document.getElementById("bg-music");
+            audio.volume = 0.6; // Volumen suave
+            audio.play().catch((error) => {
+                alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
+            });
+        });
     </script>
 
 
