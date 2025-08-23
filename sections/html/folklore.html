@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +13,8 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    body,
+    html {
       height: 100%;
       width: 100%;
       font-family: 'Cinzel', serif;
@@ -22,24 +24,30 @@
     }
 
     .back-button {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: radial-gradient(circle at center, #a00000 20%, #400000 90%); /* rojo sangre brillante al oscuro */
-    color: #fffdf7; /* blanco hueso */
-    border: 3px solid #ff0000; /* borde rojo brillante para destacar */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 52px;
-    font-family: "Cinzel Decorative", serif; /* fuente gótica visible */
-    cursor: pointer;
-    text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b; /* brillo rojo intenso */
-    box-shadow: 0 0 20px rgba(255,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.9);
-    z-index: 9999; /* siempre visible */
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: radial-gradient(circle at center, #a00000 20%, #400000 90%);
+      /* rojo sangre brillante al oscuro */
+      color: #fffdf7;
+      /* blanco hueso */
+      border: 3px solid #ff0000;
+      /* borde rojo brillante para destacar */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 52px;
+      font-family: "Cinzel Decorative", serif;
+      /* fuente gótica visible */
+      cursor: pointer;
+      text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b;
+      /* brillo rojo intenso */
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      /* siempre visible */
     }
 
     .pantalla-vampiro {
@@ -75,16 +83,27 @@
       border-radius: 8px;
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J7DY7SQ72H');
+  </script>
+
 </head>
+
 <body>
-    <button class="back-button" onclick="goBack()">←</button>
+  <button class="back-button" onclick="goBack()">←</button>
 
   <div class="pantalla-vampiro">
     <img src="../../assets/images/vampire-kiss.jpg" alt="La creación del vampiro">
     <div class="titulo-vampiro">🩸 La Creación del Vampiro</div>
   </div>
 
-    <script>
+  <script>
     // Botón de regresar
     function goBack() {
       document.body.classList.add("fade-out"); // activa desvanecimiento
@@ -92,7 +111,8 @@
         window.history.back(); // vuelve a la página anterior
       }, 1000);
     }
-    </script>
+  </script>
 
 </body>
+
 </html>

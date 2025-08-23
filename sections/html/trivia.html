@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,34 +16,40 @@
     }
 
     .back-button {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: radial-gradient(circle at center, #a00000 20%, #400000 90%); /* rojo sangre brillante al oscuro */
-    color: #fffdf7; /* blanco hueso */
-    border: 3px solid #ff0000; /* borde rojo brillante para destacar */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 52px;
-    font-family: "Cinzel Decorative", serif; /* fuente gótica visible */
-    cursor: pointer;
-    text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b; /* brillo rojo intenso */
-    box-shadow: 0 0 20px rgba(255,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.9);
-    z-index: 9999; /* siempre visible */
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: radial-gradient(circle at center, #a00000 20%, #400000 90%);
+      /* rojo sangre brillante al oscuro */
+      color: #fffdf7;
+      /* blanco hueso */
+      border: 3px solid #ff0000;
+      /* borde rojo brillante para destacar */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 52px;
+      font-family: "Cinzel Decorative", serif;
+      /* fuente gótica visible */
+      cursor: pointer;
+      text-shadow: 2px 2px 8px black, 0 0 15px #ff3b3b;
+      /* brillo rojo intenso */
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      /* siempre visible */
     }
 
     .trivia-vampiro {
-    max-width: 600px;
-    margin: auto;
-    padding: 2rem;
-    border: 3px solid #ff0303;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #5a0f0f;
-    background-color: #1a0f0f;
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      border: 3px solid #ff0303;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #5a0f0f;
+      background-color: #1a0f0f;
     }
 
     .trivia-titulo {
@@ -96,10 +103,20 @@
       opacity: 1;
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J7DY7SQ72H');
+  </script>
 </head>
+
 <body>
 
-    <button class="back-button" onclick="goBack()">←</button>
+  <button class="back-button" onclick="goBack()">←</button>
 
   <section class="trivia-vampiro">
     <h2 class="trivia-titulo">🩸 ¿Qué tipo de vampiro serías?</h2>
@@ -157,14 +174,15 @@
     }
   </script>
 
-    <script>
-        // Botón de regresar
-        function goBack() {
-        document.body.classList.add("fade-out"); // activa desvanecimiento
-        setTimeout(() => {
-            window.history.back(); // vuelve a la página anterior
-        }, 1000);
-        }
-    </script>
+  <script>
+    // Botón de regresar
+    function goBack() {
+      document.body.classList.add("fade-out"); // activa desvanecimiento
+      setTimeout(() => {
+        window.history.back(); // vuelve a la página anterior
+      }, 1000);
+    }
+  </script>
 </body>
+
 </html>

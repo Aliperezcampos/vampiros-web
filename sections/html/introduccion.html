@@ -9,6 +9,15 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&family=Open+Sans&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/introduccion.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J7DY7SQ72H');
+  </script>
 </head>
 
 <body>
@@ -173,7 +182,7 @@
         window.history.back(); // vuelve a la página anterior
       }, 1000);
     }
-    
+
     function openModal(img) {
       const modal = document.getElementById("vampireModal");
       const modalImg = document.getElementById("modalImg");
