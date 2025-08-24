@@ -22,15 +22,17 @@
 </head>
 
 <body>
-    <!-- Botón para activar la melodía -->
-    <div class="audio-control">
-        <button id="activar-musica" class="btn-melodia">Reproducir Melodía</button>
-    </div>
-    <!-- Audio oculto -->
-    <audio id="bg-music">
-        <source src="../../assets/music/relaxing.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-    </audio>
+  <!-- Imagen para activar la melodía -->
+  <div class="audio-control">
+    <img src="../../assets/images/altavoz_gotico.png" alt="Control de música" id="activar-musica" class="imagen-musical">
+    <div class="caption-musical">Presiona para música</div>
+  </div>
+
+  <!-- Audio oculto -->
+  <audio id="bg-music">
+    <source src="../../assets/music/relaxing.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
     <button class="back-button" onclick="goBack()">←</button>
     <header>
         <h1>Orígenes del Mito Vampírico</h1>
@@ -266,13 +268,16 @@
             window.speechSynthesis.cancel();
         }
 
-        document.getElementById("activar-musica").addEventListener("click", function () {
-            const audio = document.getElementById("bg-music");
-            audio.volume = 0.6; // Volumen suave
-            audio.play().catch((error) => {
-                alert("Tu navegador bloqueó la reproducción automática. Toca de nuevo para activar.");
-            });
-        });
+    const iconoMusica = document.getElementById('activar-musica');
+    const audio = document.getElementById('bg-music');
+
+    iconoMusica.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
     </script>
 
 
