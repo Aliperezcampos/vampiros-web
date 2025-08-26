@@ -9,11 +9,10 @@ body {
 
 .overlay {
   background: rgba(0, 0, 0, 0.7);
-  padding: 60px 20px;
+  padding: 10px 10px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 h1 {
@@ -113,7 +112,9 @@ p {
 
   .btn {
     font-size: 1em;
-    padding: 10px 20px;
+    padding: 10px 12px;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
   .bat {
@@ -121,7 +122,9 @@ p {
   }
 
   .overlay {
-    padding: 40px 10px;
+    padding: 10px 10px;
+    margin: 0;
+    width: 90%;
   }
 }
 

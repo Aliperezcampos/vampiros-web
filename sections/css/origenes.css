@@ -103,8 +103,6 @@ nav a::after {
     transition: width 0.3s ease;
 }
 
-
-
 /* Contenido principal */
 main {
     max-width: 900px;
