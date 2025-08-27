@@ -248,8 +248,60 @@ li::before {
 }
 
 @media (max-width: 600px) {
-  .btn-melodia {
-    font-size: 1em;
-    padding: 10px 20px;
+  /* Ajuste general */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  /* Botón regresar más compacto */
+  .back-button {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    border-width: 2px;
+    top: 10px;
+    left: 10px;
+  }
+
+  /* Botones de lectura más grandes para "dedo" */
+  .button-container {
+    flex-direction: column; /* en columna en pantallas chicas */
+    gap: 10px;
+  }
+
+  .button-container button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  /* Imágenes decorativas más fluidas */
+  .borla-intermedia {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+
+  /* Imagen musical más pequeña */
+  .imagen-musical {
+    width: 60px;
+  }
+
+  .caption-musical {
+    font-size: 0.9em;
+  }
+
+  /* Encabezados ajustados */
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
   }
 }
