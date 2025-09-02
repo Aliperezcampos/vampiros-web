@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Historia del Mito Vampírico</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/audio_control.css" />
+    <link rel="stylesheet" href="css/modal.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Historia del Mito Vampírico</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7DY7SQ72H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-J7DY7SQ72H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-J7DY7SQ72H');
-  </script>
-</head>
+      gtag("config", "G-J7DY7SQ72H");
+    </script>
+  </head>
 
-<body>
-  <div class="audio-control">
-    <img src="assets/images/altavoz_gotico.png" alt="Control de música" id="activar-musica" class="imagen-musical">
-    <div class="caption-musical">Presiona para música</div>
-  </div>
-
-  <audio id="bg-music" src="assets/music/relaxing.mp3"></audio>
-
-  <svg width="0" height="0">
-    <defs>
-      <filter id="blood-drip">
-        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence" />
-        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="300" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-  </svg>
-  <div class="overlay">
-    <h1>La Historia del Mito Vampírico</h1>
-    <div class="gallery-center">
-      <img src="assets/images/witch_2.jpg" alt="Reliquia Vampírica" class="gallery-img" onclick="openModal(this)">
-    </div>
+  <body>
+    <!-- Modal para imágenes (fuera del contenedor, ya que es overlay global) -->
     <div id="vampireModal" class="modal">
       <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modalImg">
-      <div class="caption">Reliquia Vampírica</div>
+      <img class="modal-content" id="modalImg" />
+      <div class="caption"></div>
     </div>
-    <p>Un recorrido por la evolución y el simbolismo de los vampiros, desde sus orígenes en el folklore hasta su impacto
-      en la cultura contemporánea.</p>
-    <img src="assets/images/bat-1.png" alt="Murciélago" class="bat">
-    <a href="sections/html/temario.html" class="btn" id="entrar-btn">Entrar al Sitio</a>
-  </div>
+    <div class="audio-control">
+      <img
+        src="images/altavoz_gotico.png"
+        alt="Control de música"
+        id="activar-musica"
+        class="imagen-musical"
+      />
+      <div class="caption-musical">Presiona para música</div>
+    </div>
 
-  <script>
-    function openModal(img) {
-      const modal = document.getElementById("vampireModal");
-      const modalImg = document.getElementById("modalImg");
-      modal.style.display = "block";
-      modalImg.src = img.src;
-    }
+    <audio id="bg-music" src="music/relaxing.mp3"></audio>
 
-    function closeModal() {
-      document.getElementById("vampireModal").style.display = "none";
-    }
+    <!-- Contenedor principal del contenido temático -->
+    <section class="vampire-lore-container">
+      <h1 class="vampire-title">La Historia del Mito Vampírico</h1>
 
-    window.onclick = function (event) {
-      const modal = document.getElementById("vampireModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
+      <!-- Imagen con funcionalidad de modal -->
+      <div class="vampire-image-wrapper">
+        <img
+          src="images/witch_1.jpg"
+          alt="Reliquia Vampírica"
+          class="gallery-img"
+          onclick="openModal(this)"
+        />
+      </div>
 
-    const iconoMusica = document.getElementById('activar-musica');
-    const audio = document.getElementById('bg-music');
+      <!-- Descripción principal -->
+      <div class="vampire-description">
+        <p>
+          Un recorrido por la evolución y el simbolismo de los vampiros, desde
+          sus orígenes en el folklore hasta su impacto en la cultura
+          contemporánea.
+        </p>
+      </div>
 
-    // Rutas de las imágenes
-    const imgActiva = "assets/images/altavoz_gotico.png";     // imagen normal
-    const imgMute = "assets/images/altavoz_gotico_off.png";     // imagen con X o apagado
+      <!-- Elementos decorativos (murciélagos) -->
+      <div class="decoration">
+        <img src="images/bat2.png" alt="Murciélago" class="bat bat-1" />
+      </div>
 
-    iconoMusica.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        iconoMusica.src = imgMute; // vuelve al altavoz normal
-      } else {
-        audio.pause();
-        iconoMusica.src = imgActiva;   // cambia al altavoz con X
-      }
-    });
+      <!-- Botón de entrada -->
+      <div class="cta-section">
+        <a href="temario.html" class="btn btn-primary" id="entrar-btn"
+          >Entrar al Sitio</a
+        >
+      </div>
+    </section>
 
-  </script>
+    <footer>
+      <p class="credits">
+        Música: "<a
+          href="https://pixabay.com/music/ambient-relaxing-electronic-ambient-music-354471/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Relaxing Electronic Ambient Music</a
+        >" de
+        <a
+          href="https://pixabay.com/users/clavier-music-16027823/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Clavier Music</a
+        >, vía Pixabay.
+      </p>
+    </footer>
 
-  <footer>
-    <p class="credits">
-      Música: "<a href="https://pixabay.com/music/ambient-relaxing-electronic-ambient-music-354471/" target="_blank"
-        rel="noopener noreferrer">Relaxing Electronic Ambient Music</a>" de <a
-        href="https://pixabay.com/users/clavier-music-16027823/" target="_blank" rel="noopener noreferrer">Clavier
-        Music</a>, vía Pixabay.
-    </p>
-  </footer>
-
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>

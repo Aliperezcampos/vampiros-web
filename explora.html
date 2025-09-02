@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ver Video | Título Atractivo</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/video-page.css" />
+    <link rel="stylesheet" href="css/back_button.css" />
+    <link rel="stylesheet" href="css/audio_control.css" />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-J7DY7SQ72H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-J7DY7SQ72H");
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Imagen para activar la melodía -->
+    <div class="audio-control">
+      <img
+        src="images/altavoz_gotico.png"
+        alt="Control de música"
+        id="activar-musica"
+        class="imagen-musical"
+      />
+      <div class="caption-musical">Presiona para música</div>
+    </div>
+
+    <audio id="bg-music" src="music/relaxing.mp3"></audio>
+
+    <button class="back-button" onclick="goBack()">←</button>
+    <main class="video-container-wrapper">
+      <section class="video-player-section">
+        <div class="video-player">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/PTheL0TQ9i0?si=wugY7-WoejJUJSek"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-info">
+          <h1 class="video-title">
+            Vampiros - Inicio del Mito de los Vampiros
+          </h1>
+          <p class="video-description">
+            Es un video que explora los orígenes históricos y culturales del
+            mito vampírico. Presentado por el canal Lorraine, este documental de
+            casi 14 minutos analiza cómo surgieron las leyendas sobre vampiros,
+            desde sus raíces en el folklore europeo hasta su evolución en la
+            cultura popular moderna
+          </p>
+          <div class="video-meta">
+            <span class="views">672 Vistas</span>
+            <span class="date">Publicado: 23 de Abril, 2020</span>
+            <a href="#" class="channel-link">Lorraine</a>
+          </div>
+          <div class="actions">
+            <button class="like-btn">❤️ Me gusta</button>
+            <button class="share-btn">🔗 Compartir</button>
+            <button class="subscribe-btn">🔔 Suscribirse</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar-related-videos">
+        <h2>Videos Relacionados</h2>
+        <div class="related-video-list">
+          <article class="related-video-item">
+            <a href="#">
+              <img
+                src="images/related-thumbnail-1.jpg"
+                alt="Miniatura de video relacionado 1"
+              />
+              <div class="related-video-details">
+                <h3>Otro Video Impresionante</h3>
+                <p>Breve descripción o nombre del canal.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="related-video-item">
+            <a href="#">
+              <img
+                src="images/related-thumbnail-2.jpg"
+                alt="Miniatura de video relacionado 2"
+              />
+              <div class="related-video-details">
+                <h3>Exploración Visual Única</h3>
+                <p>Breve descripción o nombre del canal.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2024 Tu Marca. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Contacto</a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

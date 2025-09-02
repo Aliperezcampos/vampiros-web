@@ -1,0 +1,19 @@
+    <svg width="0" height="0">
+      <defs>
+        <filter id="blood-drip">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.01"
+            numOctaves="3"
+            result="turbulence"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="turbulence"
+            scale="300"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </defs>
+    </svg>

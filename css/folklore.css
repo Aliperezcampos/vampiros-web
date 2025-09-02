@@ -1,0 +1,106 @@
+/* Contenedor para centrar los botones */
+.button-container {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  gap: 16px;
+  /* Espacio entre botones */
+  margin: 20px 0;
+  /* Margen superior e inferior para separación */
+}
+
+/* Estilo base para los botones */
+button {
+  background-color: #2a1b3d;
+  /* Morado oscuro para un aire misterioso */
+  color: #e0e0e0;
+  /* Texto gris claro para contraste suave */
+  font-family: 'Cinzel', serif;
+  /* Tipografía gótica elegante */
+  font-size: 16px;
+  padding: 12px 24px;
+  border: 1px solid #4b3c6b;
+  /* Borde morado más claro para definición */
+  border-radius: 24px;
+  /* Bordes ligeramente redondeados para minimalismo */
+  cursor: pointer;
+  text-transform: uppercase;
+  /* Letras mayúsculas para un toque gótico */
+  letter-spacing: 1px;
+  /* Espaciado para un look refinado */
+  transition: border-color 0.3s ease, transform 0.2s ease;
+  /* Transición suave para borde y escala */
+  animation: glow 2s ease-in-out infinite;
+  /* Animación de brillo pulsante */
+}
+
+/* Animación de brillo */
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(123, 94, 168, 0.3);
+    /* Brillo morado suave */
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgba(123, 94, 168, 0.7);
+    /* Brillo más intenso */
+  }
+}
+
+/* Animación al hacer clic (pulso sutil) */
+button:active {
+  transform: scale(0.95);
+  /* Escala ligeramente al hacer clic */
+  border-color: #7b5ea8;
+  /* Borde más claro al interactuar */
+}
+
+/* Estilo específico para el botón "Detener" */
+.detener-btn {
+  background-color: #3c1e5a;
+  /* Morado más claro para diferenciar */
+  border-color: #5f3e8a;
+  /* Borde morado más intenso */
+  animation: glow-detener 2s ease-in-out infinite;
+  /* Brillo específico */
+}
+
+/* Animación de brillo para el botón "Detener" */
+@keyframes glow-detener {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(139, 110, 184, 0.3);
+    /* Brillo morado más claro */
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgba(139, 110, 184, 0.7);
+    /* Brillo más intenso */
+  }
+}
+
+.detener-btn:active {
+  border-color: #8b6eb8;
+  /* Borde más claro para el botón "Detener" al interactuar */
+}
+
+.borla-intermedia {
+  display: block;
+  /* hace que la imagen sea un bloque */
+  margin: 20px auto;
+  /* espacio arriba y abajo, centrada horizontalmente */
+  max-width: 70%;
+  /* ajusta el tamaño al contenedor */
+  height: auto;
+  /* mantiene proporción */
+}
+
+@media (max-width: 600px) {
+  .btn-melodia {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
