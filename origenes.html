@@ -53,14 +53,16 @@
 
     <h1>Orígenes del Mito Vampírico</h1>
     <p>Un recorrido por las primeras figuras y relatos de muertos vivientes.</p>
-    <nav>
-      <ul class="nav-botones">
-        <li><a href="#origenes">·El Mito</a></li>
-        <li><a href="#lamia">·Lamia</a></li>
-        <li><a href="#lilith">·Lilith</a></li>
-        <li><a href="#otros">·Otros Muertos Vivientes</a></li>
-      </ul>
-    </nav>
+    <div id="navega-temas">
+      <nav>
+        <ul class="nav-botones">
+          <li><a href="#origenes">·El Mito</a></li>
+          <li><a href="#lamia">·Lamia</a></li>
+          <li><a href="#lilith">·Lilith</a></li>
+          <li><a href="#otros">·Otros Muertos Vivientes</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <main>
       <section id="origenes">
@@ -76,7 +78,9 @@
             evocando mitos y poder atemporal.
           </figcaption>
         </figure>
-        <button onclick="leerTexto('texto-origenes')">Leer texto</button>
+        <button class="btn" onclick="leerTexto('texto-origenes')">
+          Leer texto
+        </button>
         <button class="detener-btn" onclick="detenerLectura()">Detener</button>
         <p id="texto-origenes">
           El mito del vampiro tiene orígenes multiculturales, ligado al temor a
@@ -126,7 +130,9 @@
             Ejemplo: Pintura de la Lamia, criatura mítica de Grecia.
           </figcaption>
         </figure>
-        <button onclick="leerTexto('texto-lamia')">Leer texto</button>
+        <button class="btn" onclick="leerTexto('texto-lamia')">
+          Leer texto
+        </button>
         <button class="detener-btn" onclick="detenerLectura()">Detener</button>
         <p id="texto-lamia">
           <strong>Lamia</strong>, en la <strong>mitología griega</strong>, fue
@@ -165,7 +171,9 @@
             Ejemplo: Ilustración de Lilith, figura del folklore judío.
           </figcaption>
         </figure>
-        <button onclick="leerTexto('texto-lilith')">Leer texto</button>
+        <button class="btn" onclick="leerTexto('texto-lilith')">
+          Leer texto
+        </button>
         <button class="detener-btn" onclick="detenerLectura()">Detener</button>
         <p id="texto-lilith">
           <strong>Lilith</strong>, en la <strong>tradición judía</strong>, es
@@ -216,7 +224,9 @@
               strigoi.
             </figcaption>
           </figure>
-          <button onclick="leerTexto('texto-strigoi')">Leer texto</button>
+          <button class="btn" onclick="leerTexto('texto-strigoi')">
+            Leer texto
+          </button>
           <button class="detener-btn" onclick="detenerLectura()">
             Detener
           </button>
@@ -254,7 +264,9 @@
             />
             <figcaption>Ejemplo: Grabado de un upir eslavo.</figcaption>
           </figure>
-          <button onclick="leerTexto('texto-upir')">Leer texto</button>
+          <button class="btn" onclick="leerTexto('texto-upir')">
+            Leer texto
+          </button>
           <button class="detener-btn" onclick="detenerLectura()">
             Detener
           </button>

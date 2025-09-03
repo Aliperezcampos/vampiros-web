@@ -66,16 +66,15 @@ h1 {
 }
 
 h2 {
-  font-family: 'UnifrakturCook', cursive; /* o 'Cinzel Decorative', según tu preferencia */
+  font-family: 'Cinzel Decorative', serif;
   font-size: 2.2rem;
   color: #f3f0f0;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 4px #4A0000; /* Usando el borgoña oscuro */
   letter-spacing: 1px;
   margin: 2rem 0 1rem;
   text-align: center;
   border-bottom: 2px solid #8b0000;
   padding-bottom: 0.5rem;
-  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%, rgba(0,0,0,0.8));
 }
 
 body p {

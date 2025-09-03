@@ -76,37 +76,67 @@ section button:first-of-type {
   }
 }
 
+/* --- Estilo para todos los dispositivos (celulares primero) --- */
+#navega-temas {
+  display: flex;
+  justify-content: center;
+}
+
 .nav-botones {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 1rem 9rem;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: column; /* Apilados verticalmente para móviles */
+  gap: 1.5rem;
   font-family: 'Cinzel Decorative', serif;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Un poco más pequeño para móviles */
   text-align: center;
   animation: fadeInNav 0.8s ease-out;
 }
 
 .nav-botones li a {
-  color: #8b0000; /* rojo sangre */
+  color: #c0c0c0;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #8b0000;
-  border-radius: 14px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
-  transition: all 0.3s ease;
-  text-shadow: 1px 1px 2px black;
-  letter-spacing: 1px;
+  /* padding: 0.7rem 1.5rem; */
+  border: 1px solid #4a0000;
+  border-radius: 18px;
+  background-color: rgba(60, 1, 99, 0.9);
+  box-shadow: 0 0 15px rgba(120, 0, 120, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0 0 8px #d0d0d0;
+  letter-spacing: 1px; /* Menos espaciado para móviles */
+  text-transform: uppercase;
+  display: block; /* Ocupa el ancho completo en móviles para ser más fácil de presionar */
 }
 
 .nav-botones li a:hover {
-  background-color: #8b0000;
-  color: #000;
-  box-shadow: 0 0 15px crimson;
-  transform: scale(1.05);
+  background-color: #3d003d;
+  color: #fff;
+  border-color: #8b008b;
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  transform: scale(1.05); /* Escala más sutil para evitar errores de clics en móviles */
+  text-shadow: 0 0 15px #fff;
+}
+
+/* --- Media Query para pantallas de escritorio (anchura mínima de 768px) --- */
+@media (min-width: 768px) {
+  .nav-botones {
+    flex-direction: row; /* En fila horizontal para escritorio */
+    justify-content: center; /* Centra los botones horizontalmente */
+    font-size: 1.3rem; /* Tamaño más grande para escritorio */
+    gap: 2rem; /* Más espacio entre botones */
+    margin: 2rem 0;
+  }
+
+  .nav-botones li a {
+    letter-spacing: 2px; /* Más espacio entre letras para desktop */
+    transform: scale(1);
+  }
+
+  .nav-botones li a:hover {
+    transform: scale(1.1); /* Escala más pronunciada para el hover en escritorio */
+  }
 }
 
 @keyframes fadeInNav {
