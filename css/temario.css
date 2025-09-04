@@ -29,7 +29,16 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
+  padding: 32px;
+  background: linear-gradient(to bottom, #1c0f13, #0a0608);
+  border: 5px solid #000000;
+  border-radius: 22px;
+  box-shadow: 0 0 40px rgba(20, 10, 10, 0.6);
   animation: fadeIn 2.5s ease-out;
+  font-family: 'Georgia', serif;
+  color: #c8b6a6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .tema-boton {
@@ -59,12 +68,5 @@
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
-  }
-}
-
-@media (max-width: 600px) {
-  .btn-melodia {
-    font-size: 1em;
-    padding: 10px 20px;
   }
 }

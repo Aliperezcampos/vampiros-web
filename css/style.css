@@ -6,12 +6,14 @@ body {
   font-family: 'Crimson Text', serif;
   color: #f5f5f5;
   text-align: center;
+  animation: fogFade 1.2s ease-out forwards;
+  opacity: 0;
 }
 
 /* Contenedor principal */
 .vampire-lore-container {
   max-width: 900px;
-  margin: 0;
+  margin-bottom: 48px;
   padding: 0;
   height: 100%;
   overflow-x: hidden;
@@ -85,11 +87,6 @@ body p {
   text-align: justify;
 }
 
-strong {
-    color: #ff3b3b;
-    font-weight: bold;
-}
-
 .bat {
   width: 20px;
   margin: 0 auto 20px;
@@ -103,7 +100,6 @@ strong {
   border: 2px solid #b30000;
   box-shadow: 0 0 10px #330000, inset 0 -5px 15px #990000;
   border-radius: 8px;
-
   /* Estilos de texto y layout */
   display: inline-block;
   padding: 12px 30px;
@@ -148,6 +144,41 @@ strong {
     /* Intensifica el resplandor */
     0 0 15px rgba(0, 0, 0, 0.8);
 }
+
+ul.dark-academia-list {
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  color: #c8b6a6;
+  background: rgba(20, 18, 15, 0.7);
+  border-left: 4px solid #5e3b3b;
+  padding: 16px 24px;
+  margin: 32px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(30, 20, 20, 0.5);
+  list-style-type: none;
+}
+
+ul.dark-academia-list li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 24px;
+}
+
+ul.dark-academia-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #a67c52;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+ul.dark-academia-list strong {
+  color: #b3122e; /* rojo sangre profundo */
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(128, 0, 0, 0.6);
+}
+
 
 @keyframes bleed {
   0% {
@@ -239,5 +270,19 @@ footer a:hover {
     padding: 10px 10px;
     margin: 0;
     width: 90%;
+  }
+}
+
+@keyframes fogFade {
+  0% {
+    opacity: 0;
+    filter: blur(10px) brightness(0.5);
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: scale(1);
   }
 }
