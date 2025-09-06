@@ -22,6 +22,12 @@
   animation: vigilia-ojos 4s infinite alternate;
 }
 
+.back-button:hover {
+  transform: rotate(360deg) scale(1.2);
+  box-shadow: 0 0 60px #ff0000, inset 0 0 20px rgba(139, 0, 0, 0.8);
+  background: radial-gradient(circle, #ff0000 20%, #8b0000 90%);
+}
+
 @keyframes vigilia-ojos {
   0% {
     box-shadow: 0 0 35px rgba(255, 0, 0, 1);
@@ -30,10 +36,4 @@
   100% {
     box-shadow: 0 0 50px rgba(255, 0, 0, 1), 0 0 10px rgba(192, 192, 192, 0.5);
   }
-}
-
-.back-button:hover {
-  transform: rotate(360deg) scale(1.2);
-  box-shadow: 0 0 60px #ff0000, inset 0 0 20px rgba(139, 0, 0, 0.8);
-  background: radial-gradient(circle, #ff0000 20%, #8b0000 90%);
 }

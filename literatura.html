@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Literatura Gótica y el Mito Vampírico</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/audio_control.css" />
     <link rel="stylesheet" href="css/literatura.css" />
     <link rel="stylesheet" href="css/back_button.css" />
     <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/leer_detener.css" />
     <!-- Google Analytics -->
     <script
       async
@@ -40,14 +45,24 @@
     <audio id="bg-music" src="music/relaxing.mp3"></audio>
 
     <button class="back-button" onclick="goBack()">←</button>
+
     <header>
       <h1>Literatura gótica: Polidori, Carmilla, Drácula</h1>
+      <p>
+        Explora el oscuro legado de los vampiros a través de la literatura
+        gótica, donde el miedo y el deseo se entrelazan eternamente.
+      </p>
     </header>
+
     <div>
       <section class="vampire-lore-container">
         <h2>Análisis Histórico del Mito Vampírico</h2>
-        <button class="btn" onclick="leerTexto('analisis')">Leer texto</button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('analisis')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="analisis">
           La <b>literatura gótica</b>, surgida a finales del siglo XVIII, se
           convirtió en el lienzo perfecto para explorar lo <b>siniestro</b>, lo
@@ -65,8 +80,12 @@
       <section class="vampire-lore-container">
         <h2>John Polidori y <i>The Vampyre</i> (1819)</h2>
         <h3>Contexto del Autor</h3>
-        <button class="btn" onclick="leerTexto('john')">Leer texto</button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('analisis')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="john">
           <b>John Polidori</b> (1795-1821), médico y escritor inglés, es
           conocido como el creador de la primera narrativa vampírica moderna.
@@ -111,8 +130,12 @@
       <section class="vampire-lore-container">
         <h2>Sheridan Le Fanu y <i>Carmilla</i> (1872)</h2>
         <h3>Contexto del Autor</h3>
-        <button class="btn" onclick="leerTexto('sheridan')">Leer texto</button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('analisis')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="sheridan">
           <b>Sheridan Le Fanu</b> (1814-1873), escritor irlandés, es una figura
           clave en la literatura gótica. Proveniente de una familia hugonote, Le
@@ -155,8 +178,12 @@
       <section class="vampire-lore-container">
         <h2>Bram Stoker y <i>Drácula</i> (1897)</h2>
         <h3>Contexto del Autor</h3>
-        <button class="btn" onclick="leerTexto('bram')">Leer texto</button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('analisis')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="bram">
           <b>Bram Stoker</b> (1847-1912), escritor irlandés, trabajó como
           administrador teatral y crítico antes de publicar <i>Drácula</i>.
@@ -196,8 +223,12 @@
 
       <section class="vampire-lore-container">
         <h2>Otras Obras Relevantes para el Mito Vampírico</h2>
-        <button class="btn" onclick="leerTexto('otras')">Leer texto</button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('analisis')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="otras">
           El mito vampírico ha evolucionado gracias a otras obras que han
           enriquecido su legado. A continuación, una lista de textos destacados:

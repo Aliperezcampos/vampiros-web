@@ -93,42 +93,6 @@ body p {
   width: 180px;
 }
 
-.btn {
-  /* Estilos visuales */
-  color: #f5f5f5;
-  background-color: #660000;
-  border: 2px solid #b30000;
-  box-shadow: 0 0 10px #330000, inset 0 -5px 15px #990000;
-  border-radius: 8px;
-  /* Estilos de texto y layout */
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 1.2em;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.3s ease;
-}
-
-/* Capa sangrante */
-.btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150%;
-  background: radial-gradient(circle at 50% 0%, #b30000 0%, transparent 70%);
-  filter: url(#blood-drip);
-  animation: bleed 3s infinite ease-in-out;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.btn:hover {
-  background-color: #990000;
-}
-
 .gallery-img {
   border: 8px solid #5a0a0a;
   /* Sombra negra */
@@ -145,70 +109,54 @@ body p {
     0 0 15px rgba(0, 0, 0, 0.8);
 }
 
-ul.dark-academia-list {
-  font-family: 'Georgia', serif;
-  font-size: 1.05rem;
-  color: #c8b6a6;
-  background: rgba(20, 18, 15, 0.7);
-  border-left: 4px solid #5e3b3b;
-  padding: 16px 24px;
-  margin: 32px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(30, 20, 20, 0.5);
-  list-style-type: none;
+/* Estilo para la lista principal (el contenedor <ul>) */
+ul {
+  list-style: none; /* Elimina las viñetas predeterminadas */
+  padding: 0; /* Elimina el padding por defecto del navegador */
+  margin: 30px auto; /* Centra la lista y le da espacio */
+  max-width: 800px;
 }
 
-ul.dark-academia-list li {
-  margin-bottom: 12px;
+/* Estilo para cada elemento de la lista (el contenedor <li>) */
+li {
   position: relative;
-  padding-left: 24px;
+  background-color: #0c0c0c; /* Fondo muy oscuro, como tinta antigua */
+  color: #dcdcdc; /* Un gris casi blanco para el texto, como pergamino */
+  border: 1px solid #2a2a2a; /* Borde sutil que imita un marco */
+  margin-bottom: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Times New Roman', serif; /* Una fuente clásica para la solemnidad */
+  line-height: 1.6;
 }
 
-ul.dark-academia-list li::before {
-  content: "✦";
-  position: absolute;
-  left: 0;
-  color: #a67c52;
-  font-size: 1rem;
-  line-height: 1;
+/* Efecto al pasar el ratón para una interacción sutil */
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
 
-ul.dark-academia-list strong {
-  color: #b3122e; /* rojo sangre profundo */
+/* Detalle de viñeta simulada con pseudo-elementos */
+li:before {
+  content: "†"; /* Símbolo de cruz como viñeta */
+  color: #ffcc00; /* Dorado para evocar los íconos */
+  font-size: 1.5em;
   font-weight: bold;
-  text-shadow: 0 0 4px rgba(128, 0, 0, 0.6);
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
 }
 
-
-@keyframes bleed {
-  0% {
-    transform: translateY(-10px);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes respirar {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1.03);
-    opacity: 0.95;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+/* Estilo para los títulos en negrita dentro de la lista (la etiqueta <b>) */
+li b {
+  font-family: 'Playfair Display', serif; /* Una fuente más elaborada para los títulos */
+  font-size: 1.1em;
+  color: #ffcc00; /* Color dorado para el título */
+  display: block; /* Para que el título ocupe su propia línea */
+  margin-bottom: 5px;
 }
 
 footer {
@@ -242,6 +190,37 @@ footer a {
 footer a:hover {
   color: #ff6666;
   text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes bleed {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes respirar {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.03);
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 600px) {

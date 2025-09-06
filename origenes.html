@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/origenes.css" />
     <link rel="stylesheet" href="css/back_button.css" />
     <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/leer_detener.css" />
     <!-- Google Analytics -->
     <script
       async
@@ -78,10 +79,13 @@
             evocando mitos y poder atemporal.
           </figcaption>
         </figure>
-        <button class="btn" onclick="leerTexto('texto-origenes')">
-          Leer texto
-        </button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-origenes')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+
         <p id="texto-origenes">
           El mito del vampiro tiene orígenes multiculturales, ligado al temor a
           la muerte y lo sobrenatural. En Mesopotamia, los
@@ -130,10 +134,12 @@
             Ejemplo: Pintura de la Lamia, criatura mítica de Grecia.
           </figcaption>
         </figure>
-        <button class="btn" onclick="leerTexto('texto-lamia')">
-          Leer texto
-        </button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-origenes')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="texto-lamia">
           <strong>Lamia</strong>, en la <strong>mitología griega</strong>, fue
           una <strong>reina de Libia</strong> que mantuvo un romance con
@@ -171,10 +177,12 @@
             Ejemplo: Ilustración de Lilith, figura del folklore judío.
           </figcaption>
         </figure>
-        <button class="btn" onclick="leerTexto('texto-lilith')">
-          Leer texto
-        </button>
-        <button class="detener-btn" onclick="detenerLectura()">Detener</button>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-origenes')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
         <p id="texto-lilith">
           <strong>Lilith</strong>, en la <strong>tradición judía</strong>, es
           una figura mitológica que aparece por primera vez en textos como el
@@ -224,12 +232,12 @@
               strigoi.
             </figcaption>
           </figure>
-          <button class="btn" onclick="leerTexto('texto-strigoi')">
-            Leer texto
-          </button>
-          <button class="detener-btn" onclick="detenerLectura()">
-            Detener
-          </button>
+          <div class="buttons-container">
+            <button class="btn" onclick="leerTexto('texto-origenes')">
+              Leer texto
+            </button>
+            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          </div>
           <p id="texto-strigoi">
             El <strong>Strigoi</strong>, en el <strong>folclore rumano</strong>,
             es una <strong>criatura sobrenatural</strong> similar a un
@@ -264,12 +272,12 @@
             />
             <figcaption>Ejemplo: Grabado de un upir eslavo.</figcaption>
           </figure>
-          <button class="btn" onclick="leerTexto('texto-upir')">
-            Leer texto
-          </button>
-          <button class="detener-btn" onclick="detenerLectura()">
-            Detener
-          </button>
+          <div class="buttons-container">
+            <button class="btn" onclick="leerTexto('texto-origenes')">
+              Leer texto
+            </button>
+            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          </div>
           <p id="texto-upir">
             El <strong>Upir</strong>, también conocido como
             <strong>Upiór</strong>, es una

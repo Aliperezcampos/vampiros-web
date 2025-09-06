@@ -24,51 +24,6 @@ figcaption {
     font-family: 'Open Sans', sans-serif;
 }
 
-section {
-  background-color: rgba(0, 0, 0, 0.85); /* fondo oscuro translúcido */
-  border: 1px solid #8b0000; /* borde rojo sangre */
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  box-shadow: 0 0 20px rgba(139, 0, 0, 0.4);
-  border-radius: 8px;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(4px);
-}
-
-
-/* Estilo base para todos los botones de lectura */
-section button {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin-top: 15px;
-    margin-right: 10px;
-}
-
-/* Estilo para el botón de "Leer texto" */
-section button:first-of-type {
-    background: radial-gradient(circle at center, #b30000 20%, #400000 90%);
-    color: #e0d6d6;
-    border: 2px solid #b30000;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    text-shadow: 0 0 5px #000;
-}
-
-/* Estilo para el botón de "Detener" */
-.detener-btn {
-    background: radial-gradient(circle at center, #b30000 20%, #400000 90%);
-    color: #e0d6d6;
-    border: 2px solid #5a0a0a;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
-}
-
 @media (max-width: 600px) {
   .btn-melodia {
     font-size: 1em;
