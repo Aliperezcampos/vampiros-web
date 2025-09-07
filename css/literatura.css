@@ -20,6 +20,18 @@ b::after,
     box-shadow: 0 0 5px #8b0000;
 }
 
+.imagen-gotica {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 2px solid #5c0d12;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  border-radius: 8px;
+  filter: grayscale(20%) contrast(120%);
+  object-fit: cover;
+}
+
 @keyframes subrayado-sangre {
     0% {
         width: 0;

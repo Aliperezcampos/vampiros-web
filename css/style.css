@@ -10,23 +10,44 @@ body {
   opacity: 0;
 }
 
-/* Contenedor principal */
 .vampire-lore-container {
   max-width: 900px;
-  margin-bottom: 48px;
-  padding: 0;
+  margin: 48px auto;
+  padding: 32px;
   height: 100%;
-  overflow-x: hidden;
-  background: rgba(15, 15, 25, 0.8);
-  border-radius: 16px;
-  border: 1px solid #401515;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to bottom right, #0b0b13, #1a0a0f);
+  border-radius: 12px;
+  border: 2px solid #5c0d12;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.6);
   position: relative;
-  overflow: hidden;
-  color: #d0b090;
-  font-family: 'Georgia', serif;
+  color: #e0c8b0;
+  font-family: 'UnifrakturCook', 'Georgia', serif;
   text-align: center;
+  overflow: hidden;
 }
+
+/* Niebla flotante */
+.vampire-lore-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../images/niebla.png') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  animation: flotarNiebla 5s linear infinite;
+}
+
+.vampire-lore-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes flotarNiebla {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
 
 .vampire-title {
   font-size: 2.5em;
@@ -223,6 +244,20 @@ footer a:hover {
   }
 }
 
+@keyframes fogFade {
+  0% {
+    opacity: 0;
+    filter: blur(10px) brightness(0.5);
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 600px) {
   h1 {
     font-size: 2em;
@@ -249,19 +284,5 @@ footer a:hover {
     padding: 10px 10px;
     margin: 0;
     width: 90%;
-  }
-}
-
-@keyframes fogFade {
-  0% {
-    opacity: 0;
-    filter: blur(10px) brightness(0.5);
-    transform: scale(0.9);
-  }
-
-  100% {
-    opacity: 1;
-    filter: blur(0) brightness(1);
-    transform: scale(1);
   }
 }

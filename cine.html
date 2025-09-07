@@ -2,11 +2,18 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evolución del Mito Vampírico</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/audio_control.css" />
-    <link rel="stylesheet" href="css/temario.css" />
     <link rel="stylesheet" href="css/back_button.css" />
+    <link rel="stylesheet" href="css/leer_detener.css" />
+    <link rel="stylesheet" href="css/cine.css" />
+
     <!-- Google Analytics -->
     <script
       async
@@ -22,6 +29,7 @@
       gtag("config", "G-J7DY7SQ72H");
     </script>
   </head>
+
   <body>
     <!-- Imagen para activar la melodía -->
     <div class="audio-control">
@@ -46,9 +54,30 @@
     </header>
 
     <main>
-      <section>
+      <section class="vampire-lore-container">
+        <div class="video-frame-gothic">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/QZmgu6igzyA?si=dSUwP5JB_acyy4BL"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="vampire-lore-container">
         <h2>Introducción</h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-introduccion')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-introduccion">
           El mito vampírico, uno de los más perdurables en la cultura popular,
           ha evolucionado a lo largo de los siglos, moldeado por el cine y otras
           expresiones de la cultura pop que han reinterpretado y fortalecido su
@@ -62,9 +91,15 @@
         </p>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2>Orígenes del mito vampírico</h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-origenes')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-origen">
           El vampiro tiene raíces en el folclore europeo, particularmente en las
           tradiciones de Europa del Este, donde se le asociaba con la muerte, la
           enfermedad y lo sobrenatural. Estas criaturas eran a menudo cadáveres
@@ -79,11 +114,17 @@
         </p>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2>
           <em>Nosferatu</em> (1922): El nacimiento del vampiro cinematográfico
         </h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-nosferatu')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-nosferatu">
           El cine, como medio emergente en el siglo XX, desempeñó un papel
           crucial en la popularización del mito vampírico. *Nosferatu, una
           sinfonía del horror* (1922), dirigida por F. W. Murnau, es la primera
@@ -97,9 +138,15 @@
         </p>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2>Universal Pictures y el vampiro clásico</h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-dracula')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-dracula">
           En 1931, Universal Pictures lanzó *Drácula*, dirigida por Tod Browning
           y protagonizada por Bela Lugosi. Esta película consolidó la imagen del
           vampiro como un aristócrata carismático, elegante y seductor,
@@ -120,9 +167,15 @@
         </p>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2>Hammer Films: El vampiro gótico y sensual</h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-hammer')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-hammer">
           A partir de la década de 1950, Hammer Film Productions revitalizó el
           mito vampírico con un enfoque más explícito en la sensualidad y el
           horror gráfico. *Dracula* (1958), dirigida por Terence Fisher y
@@ -143,9 +196,15 @@
         </p>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2><em>Blade</em> (1998): El vampiro en la cultura pop moderna</h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-blade')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-blade">
           En los años 90, el mito vampírico se reinventó para reflejar
           sensibilidades contemporáneas. *Blade* (1998), dirigida por Stephen
           Norrington y basada en el personaje de Marvel Comics, presentó a un
@@ -167,7 +226,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2>Otros hitos clave en la evolución del mito vampírico</h2>
         <ul>
           <li>
@@ -201,9 +260,15 @@
         </ul>
       </section>
 
-      <section>
+      <section class="vampire-lore-container">
         <h2>Perspectiva histórica y cultural</h2>
-        <p>
+        <div class="buttons-container">
+          <button class="btn" onclick="leerTexto('texto-perspectiva')">
+            Leer texto
+          </button>
+          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        </div>
+        <p id="texto-perspectiva">
           El mito vampírico ha evolucionado en respuesta a los contextos
           históricos y culturales. En los años 20, *Nosferatu* reflejaba los
           horrores de la Primera Guerra Mundial y las epidemias. En los 30, el
