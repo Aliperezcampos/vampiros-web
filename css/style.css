@@ -48,36 +48,21 @@ body {
   100% { transform: translateY(0); }
 }
 
-
-.vampire-title {
-  font-size: 2.5em;
-  color: #660000;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
 .vampire-image-wrapper {
   margin: 20px 0;
 }
 
 .vampire-image-wrapper img.gallery-img {
-  width: 100%;
-  max-width: 320px;
+  width: 320px;               /* ancho fijo */
+  height: 200px;              /* alto fijo */
+  object-fit: contain;        /* muestra la imagen completa */
+  background-color: #000;     /* opcional: relleno para bandas */
   border: 3px solid #502030;
   border-radius: 10px;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.vampire-description p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  color: #ccc;
-  margin: 20px 0;
-}
-
-.cta-section {
-  margin: 30px 0;
 }
 
 h1 {
@@ -108,10 +93,33 @@ body p {
   text-align: justify;
 }
 
-.bat {
-  width: 20px;
-  margin: 0 auto 20px;
-  width: 180px;
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: 'Cinzel', serif; /* tipografía con aire gótico */
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #f5e6ff; /* texto claro sobre fondo oscuro */
+  background: linear-gradient(145deg, #3a003a, #5e1a5e); /* degradado púrpura profundo */
+  border: 2px solid #a64ca6; /* borde púrpura brillante */
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(166, 76, 166, 0.8);
+  box-shadow: 0 0 12px rgba(80, 0, 80, 0.6), inset 0 0 8px rgba(255, 200, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #5e1a5e, #3a003a);
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(166, 76, 166, 0.9), inset 0 0 12px rgba(255, 200, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 8px rgba(166, 76, 166, 0.7), inset 0 0 6px rgba(255, 200, 255, 0.2);
 }
 
 .gallery-img {
@@ -130,63 +138,66 @@ body p {
     0 0 15px rgba(0, 0, 0, 0.8);
 }
 
-/* Estilo para la lista principal (el contenedor <ul>) */
+/* Lista principal */
 ul {
-  list-style: none; /* Elimina las viñetas predeterminadas */
-  padding: 0; /* Elimina el padding por defecto del navegador */
-  margin: 30px auto; /* Centra la lista y le da espacio */
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
   max-width: 800px;
 }
 
-/* Estilo para cada elemento de la lista (el contenedor <li>) */
+/* Elementos de la lista */
 li {
   position: relative;
-  background-color: #0c0c0c; /* Fondo muy oscuro, como tinta antigua */
-  color: #dcdcdc; /* Un gris casi blanco para el texto, como pergamino */
-  border: 1px solid #2a2a2a; /* Borde sutil que imita un marco */
+  background: linear-gradient(145deg, #0b000b, #1a001a); /* degradado púrpura oscuro */
+  color: #e6d9f0; /* gris-lavanda claro */
+  border: 1px solid #3a003a; /* borde púrpura profundo */
   margin-bottom: 20px;
   padding: 25px 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Times New Roman', serif; /* Una fuente clásica para la solemnidad */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(166, 76, 166, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  font-family: 'Cinzel', serif; /* tipografía gótica elegante */
   line-height: 1.6;
 }
 
-/* Efecto al pasar el ratón para una interacción sutil */
+/* Hover dramático */
 li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+  border-color: #a64ca6; /* acento púrpura brillante */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85), inset 0 0 15px rgba(166, 76, 166, 0.4);
 }
 
-/* Detalle de viñeta simulada con pseudo-elementos */
-li:before {
-  content: "†"; /* Símbolo de cruz como viñeta */
-  color: #ffcc00; /* Dorado para evocar los íconos */
-  font-size: 1.5em;
+/* Viñeta gótica */
+li::before {
+  content: "✦"; /* símbolo estrellado místico */
+  color: #a64ca6; /* púrpura brillante */
+  font-size: 1.4em;
   font-weight: bold;
   position: absolute;
-  left: -20px;
+  left: -25px;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.8;
+  text-shadow: 0 0 6px rgba(166, 76, 166, 0.8);
 }
 
-/* Estilo para los títulos en negrita dentro de la lista (la etiqueta <b>) */
+/* Títulos dentro de la lista */
 li b {
-  font-family: 'Playfair Display', serif; /* Una fuente más elaborada para los títulos */
-  font-size: 1.1em;
-  color: #ffcc00; /* Color dorado para el título */
-  display: block; /* Para que el título ocupe su propia línea */
+  font-family: 'UnifrakturCook', cursive; /* tipografía gótica ornamental */
+  font-size: 1.2em;
+  color: #d9a6ff; /* púrpura claro */
+  display: block;
   margin-bottom: 5px;
+  text-shadow: 0 0 6px rgba(166, 76, 166, 0.7);
 }
+
 
 footer {
-  background: linear-gradient(to top, #000000, var(--color-dark-bg));
-  border-top: 2px solid var(--color-accent);
+  background: linear-gradient(to top, #000000, #1a001a); /* #1a001a como dark-bg */
+  border-top: 2px solid #a64ca6; /* púrpura brillante como accent */
   padding: 30px 20px;
   text-align: center;
   color: #a89ca0;
-  font-family: var(--font-body);
+  font-family: 'Cinzel', serif; /* tipografía gótica */
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -200,18 +211,18 @@ footer .credits {
 }
 
 footer a {
-  color: var(--color-accent-light);
+  color: #d9a6ff;              /* tono púrpura claro para resaltar sobre fondo oscuro */
   text-decoration: none;
-  font-family: var(--font-gothic);
+  font-family: 'UnifrakturCook', cursive; /* tipografía gótica */
   font-weight: bold;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #ff6666;
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  color: #ffffff;              /* brillo al pasar el cursor */
 }
+
 
 @keyframes bleed {
   0% {

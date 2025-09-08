@@ -52,7 +52,7 @@
     <button class="back-button" onclick="goBack()">←</button>
 
     <h1>El Encanto de los Vampiros: Mitos, Miedos y Fascinación</h1>
-    <p class="subtitulo">
+    <p>
       Descubre qué define a un vampiro y por qué sigue cautivando nuestra
       imaginación.
     </p>
@@ -144,95 +144,71 @@
         a figuras complejas como Louis o Edward. Reflejan nuestras
         contradicciones más profundas.
       </p>
-      <div class="galeria">
-        <figure>
-          <img
-            src="images/lugosi.jpg"
-            alt="Bela Lugosi"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Bela Lugosi (Drácula)</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/lord-ruthven.jpg"
-            alt="Lord Ruthven"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Lord Ruthven</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/varney.jpg"
-            alt="Varney The Vampire"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Varney</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/carmilla.jpg"
-            alt="Carmilla"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Carmilla</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/nosferatu.jpg"
-            alt="Nosferatu"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Nosferatu</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/vlad-tepes.png"
-            alt="Vlad Tepes"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Vlad Tepes</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/lamia.jpg"
-            alt="Lamia"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Lamia</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/lucy-westenra.jpg"
-            alt="Lucy Westenra"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Lucy Westenra</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/akasha.jpg"
-            alt="Akasha"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-          <figcaption>Akasha</figcaption>
-        </figure>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/lugosi.jpg" alt="Imagen 1" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/lord-ruthven.jpg" alt="Imagen 2" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/varney.jpg" alt="Imagen 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/carmilla.jpg" alt="Imagen 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/nosferatu.jpg" alt="Imagen 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/vlad-tepes.png" alt="Imagen 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/lamia.jpg" alt="Imagen 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/lucy-westenra.jpg" alt="Imagen 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/akasha.jpg" alt="Imagen 3" />
+        </div>
+
+        <!-- Botones -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
+
+      <!-- Puntos -->
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
       <form class="encuesta">
-        <label>¿Qué te atrae más de los vampiros?</label><br />
-        <input type="radio" name="atraccion" value="misterio" /> Misterio<br />
-        <input type="radio" name="atraccion" value="poder" /> Poder<br />
-        <input type="radio" name="atraccion" value="romanticismo" />
-        Romanticismo<br />
+        <label>¿Qué te atrae más de los vampiros?</label>
+
+        <input type="radio" name="atraccion" value="misterio" id="misterio" />
+        <span for="misterio">Misterio</span><br />
+
+        <input type="radio" name="atraccion" value="poder" id="poder" />
+        <span for="poder">Poder</span><br />
+
+        <input
+          type="radio"
+          name="atraccion"
+          value="romanticismo"
+          id="romanticismo"
+        />
+        <span for="romanticismo">Romanticismo</span><br />
       </form>
     </section>
     <section class="vampire-lore-container">

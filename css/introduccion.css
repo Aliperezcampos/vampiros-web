@@ -58,46 +58,83 @@
   box-shadow: 0 0 10px rgba(150, 0, 0, 0.4);
 }
 
-/* Galería de vampiros icónicos */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-  margin-top: 48px;
-  padding: 24px;
-  background: linear-gradient(to bottom, #0a0a0f, #1a0a0f);
-  border: 1px solid #401515;
-  border-radius: 16px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
-  position: relative;
-  z-index: 1;
-}
-
-
-.galeria figure {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(64, 21, 21, 0.6);
-  animation: fogFade 1.2s ease-out forwards;
-  opacity: 0;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-/* Encuesta simple */
+/* Contenedor del formulario */
 .encuesta {
-  margin-top: 20px;
-  font-size: 1em;
+  background: linear-gradient(145deg, #0b000b, #1a001a);
+  border: 2px solid #3a003a;
+  padding: 20px 25px;
+  max-width: 400px;
+  margin: 30px auto;
+  font-family: 'Cinzel', serif;
+  color: #e6d9f0;
+  box-shadow: 0 0 20px rgba(166, 76, 166, 0.4);
+  border-radius: 10px;
 }
 
-.encuesta input {
-  margin-right: 8px;
+/* Etiqueta principal */
+.encuesta label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #d9a6ff;
+  text-shadow: 0 0 6px rgba(166, 76, 166, 0.7);
+}
+
+/* Ocultar radio original */
+.encuesta input[type="radio"] {
+  display: none;
+}
+
+/* Estilo del radio personalizado */
+.encuesta input[type="radio"] + span {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #e6d9f0;
+  transition: color 0.3s ease;
+}
+
+/* Círculo exterior */
+.encuesta input[type="radio"] + span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #a64ca6;
+  border-radius: 50%;
+  background: #0b000b;
+  box-shadow: 0 0 6px rgba(166, 76, 166, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Punto interior al seleccionar */
+.encuesta input[type="radio"]:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #d9a6ff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(166, 76, 166, 0.8);
+}
+
+/* Hover sobre la opción */
+.encuesta input[type="radio"] + span:hover {
+  color: #ffffff;
+}
+
+.encuesta input[type="radio"] + span:hover::before {
+  border-color: #d9a6ff;
+  box-shadow: 0 0 10px rgba(217, 166, 255, 0.8);
 }
 
 /* Cierre con cita */
@@ -179,3 +216,70 @@ textarea {
     padding: 10px 20px;
   }
 }
+
+/*INICIO DE CARRUSEL*/
+* { box-sizing: border-box; }
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  border: 3px solid #3a003a;
+  box-shadow: 0 0 20px rgba(166, 76, 166, 0.6);
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  display: block;
+}
+
+/* Botones de navegación */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background: rgba(0,0,0,0.4);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(166, 76, 166, 0.8);
+}
+
+/* Puntos indicadores */
+.dot-container {
+  text-align: center;
+  padding: 10px;
+  background: #1a001a;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+  background-color: #a64ca6;
+}
+/*FIN DE CARRUSEL*/
