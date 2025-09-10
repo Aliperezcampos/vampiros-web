@@ -48,6 +48,27 @@
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
+.imagen-intro {
+  /* Fondo sobrio y oscuro para contrastar con la imagen */
+  background-color: #0d0d0d;
+  color: #c4c4c4; /* Texto gris claro para legibilidad */
+  
+  /* Borde con apariencia de piedra o metal oscuro */
+  border: 4px ridge #2a2a2a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  
+  /* Tipografía gótica o con estilo de serif antiguo */
+  font-family: 'Times New Roman', Times, serif; 
+  
+  /* Alineación para centrar la imagen dentro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Añade un poco de espacio interno para que la imagen no toque los bordes */
+  padding: 30px;
+}
+
 /* Dato vampírico destacado */
 .dato-vampirico {
   background-color: #330000;

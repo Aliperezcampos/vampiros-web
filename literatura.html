@@ -54,22 +54,26 @@
       </p>
     </header>
 
-    <section class="vampire-lore-container">
-      <img
-        src="images/book-otranto.png"
-        alt="book-otranto"
-        class="imagen-gotica"
-      />
-    </section>
-
     <div>
       <section class="vampire-lore-container">
         <h2>Análisis Histórico del Mito Vampírico</h2>
-        <div class="buttons-container">
-          <button class="btn" onclick="leerTexto('analisis')">
-            Leer texto
+        <div class="marco-halloween">
+          <div class="murcielagos-adicionales"></div>
+          <figure>
+            <img
+              src="images/book-otranto.png"
+              alt="Representación de Lamia"
+              onclick="openModal(this)"
+            />
+            <figcaption>
+              Un guerrero y un monstruo luchan en un ambiente oscuro y
+              dramático, con una figura femenina observando.
+            </figcaption>
+          </figure>
+          <button class="btn" onclick="leerTexto('texto-origenes')">
+            PLAY
           </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          <button class="btn" onclick="detenerLectura()">STOP</button>
         </div>
         <p id="analisis">
           La <b>literatura gótica</b>, surgida a finales del siglo XVIII, se
@@ -92,7 +96,7 @@
           <button class="btn" onclick="leerTexto('analisis')">
             Leer texto
           </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          <button class="btn" onclick="detenerLectura()">Detener</button>
         </div>
         <p id="john">
           <b>John Polidori</b> (1795-1821), médico y escritor inglés, es
@@ -142,7 +146,7 @@
           <button class="btn" onclick="leerTexto('analisis')">
             Leer texto
           </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          <button class="btn" onclick="detenerLectura()">Detener</button>
         </div>
         <p id="sheridan">
           <b>Sheridan Le Fanu</b> (1814-1873), escritor irlandés, es una figura
@@ -190,7 +194,7 @@
           <button class="btn" onclick="leerTexto('analisis')">
             Leer texto
           </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          <button class="btn" onclick="detenerLectura()">Detener</button>
         </div>
         <p id="bram">
           <b>Bram Stoker</b> (1847-1912), escritor irlandés, trabajó como
@@ -235,7 +239,7 @@
           <button class="btn" onclick="leerTexto('analisis')">
             Leer texto
           </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+          <button class="btn" onclick="detenerLectura()">Detener</button>
         </div>
         <p id="otras">
           El mito vampírico ha evolucionado gracias a otras obras que han

@@ -13,52 +13,173 @@ section button {
 }
 
 /* Estilo para el botón de "Leer texto" */
-section button:first-of-type {
-    background: radial-gradient(circle at center, #b30000 20%, #400000 90%);
-    color: #e0d6d6;
-    border: 2px solid #b30000;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    text-shadow: 0 0 5px #000;
-}
-
-.buttons-container {
-  border: 4px solid #333; 
-  border-radius: 0;
+.marco-halloween {
+  position: relative;
+  width: fit-content;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #050505; /* Fondo aún más oscuro, casi negro total */
+  border: 4px solid #cc3300; /* Naranja más oscuro, casi sangre seca */
+  border-radius: 8px; /* Ligeramente más redondeado */
   box-shadow: 
-    inset 0 0 15px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(0, 0, 0, 0.5); 
-  background-color: #1a1a1a; 
-  padding: 20px;
-  position: relative; 
-  margin: 30px auto;
+    0 0 30px rgba(255, 80, 0, 0.9), /* Resplandor naranja más intenso y extendido */
+    inset 0 0 20px rgba(255, 120, 0, 0.7); /* Brillo interno que parece irradiar */
+  
+  overflow: visible; /* Imprescindible para que todo sobresalga */
+  
+  /* Animación de pulso más dramática */
+  animation: pulsoHalloweenIntenso 2.5s infinite alternate ease-in-out;
+  
+  /* Añadimos un efecto de neblina o humo sutil */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none; /* Asegura que no bloquee interacciones */
+    z-index: 5; /* Por debajo de los murciélagos */
+  }
 }
 
-.buttons-container:before,
-.buttons-container:after {
+.marco-halloween img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #800000; /* Borde interior de la imagen en un rojo sangre más profundo */
+  border-radius: 5px;
+  filter: saturate(1.2) contrast(1.1); /* Intensificar colores de la imagen */
+}
+
+/* --- Estilos para los murciélagos del contenedor principal (esquinas) --- */
+.marco-halloween::before,
+.marco-halloween::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #6b0000; 
-  border-radius: 50%;
-  z-index: 1;
+  width: 100px; /* Murciélagos un poco más grandes */
+  height: 100px;
+  background-image: url('../images/bat-vector-purple.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1)); /* Sombra más pronunciada */
 }
 
-.buttons-container:before {
-  top: -10px;
-  left: -10px;
-  border-bottom: none;
-  border-right: none;
+/* Murciélago superior izquierdo */
+.marco-halloween::before {
+  top: -45px;
+  left: -45px;
+  transform: rotate(-25deg);
+  animation: volarMurcielago1 4s infinite ease-in-out;
 }
 
-.buttons-container:after {
-  bottom: -10px;
-  right: -10px;
-  border-top: none;
-  border-left: none;
+/* Murciélago inferior derecho */
+.marco-halloween::after {
+  bottom: -45px;
+  right: -45px;
+  transform: scaleX(-1) rotate(25deg);
+  animation: volarMurcielago2 5s infinite ease-in-out reverse;
 }
 
-.btn, .btn_stop {
+/* --- Contenedor para murciélagos adicionales (dentro del marco) --- */
+.murcielagos-adicionales {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite interactuar con la imagen debajo */
+  z-index: 8; /* Por encima de la neblina, por debajo de los murciélagos principales */
+}
+
+/* Más murciélagos dispersos */
+.murcielagos-adicionales::before,
+.murcielagos-adicionales::after {
+  content: '';
+  position: absolute;
+  background-image: url('../images/bat-vector-purple.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+  opacity: 0.8; /* Ligeramente transparentes */
+}
+
+/* Murciélago superior derecho (más pequeño) */
+.murcielagos-adicionales::before {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  right: -20px;
+  transform: rotate(10deg);
+  animation: volarMurcielago3 7s infinite ease-in-out;
+}
+
+/* Murciélago inferior izquierdo (mediano) */
+.murcielagos-adicionales::after {
+  width: 75px;
+  height: 75px;
+  bottom: 15%;
+  left: -25px;
+  transform: scaleX(-1) rotate(-5deg);
+  animation: volarMurcielago4 6s infinite ease-in-out reverse;
+}
+
+/* --- Nuevos Keyframes para las animaciones --- */
+@keyframes pulsoHalloweenIntenso {
+  0% { 
+    border-color: #cc3300; 
+    box-shadow: 
+      0 0 30px rgba(255, 80, 0, 0.9), 
+      inset 0 0 20px rgba(255, 120, 0, 0.7); 
+  }
+  50% { 
+    border-color: #ff0000; /* Rojo más intenso */
+    box-shadow: 
+      0 0 45px rgba(255, 30, 0, 1), /* Resplandor aún más fuerte */
+      inset 0 0 25px rgba(255, 100, 0, 0.9); 
+  }
+  100% { 
+    border-color: #cc3300; 
+    box-shadow: 
+      0 0 30px rgba(255, 80, 0, 0.9), 
+      inset 0 0 20px rgba(255, 120, 0, 0.7); 
+  }
+}
+
+/* Animaciones de vuelo (ajustadas para más movimiento) */
+@keyframes volarMurcielago1 {
+  0% { transform: translate(0, 0) rotate(-25deg); }
+  25% { transform: translate(8px, -15px) rotate(-18deg); }
+  50% { transform: translate(-5px, 5px) rotate(-30deg); }
+  75% { transform: translate(10px, -8px) rotate(-22deg); }
+  100% { transform: translate(0, 0) rotate(-25deg); }
+}
+
+@keyframes volarMurcielago2 {
+  0% { transform: scaleX(-1) translate(0, 0) rotate(25deg); }
+  25% { transform: scaleX(-1) translate(-8px, 15px) rotate(18deg); }
+  50% { transform: scaleX(-1) translate(5px, -5px) rotate(30deg); }
+  75% { transform: scaleX(-1) translate(-10px, 8px) rotate(22deg); }
+  100% { transform: scaleX(-1) translate(0, 0) rotate(25deg); }
+}
+
+@keyframes volarMurcielago3 {
+  0% { transform: translate(0, 0) rotate(10deg); }
+  33% { transform: translate(15px, 5px) rotate(15deg) scale(1.05); }
+  66% { transform: translate(-10px, -5px) rotate(5deg) scale(0.95); }
+  100% { transform: translate(0, 0) rotate(10deg); }
+}
+
+@keyframes volarMurcielago4 {
+  0% { transform: scaleX(-1) translate(0, 0) rotate(-5deg); }
+  33% { transform: scaleX(-1) translate(-15px, -5px) rotate(-10deg) scale(1.05); }
+  66% { transform: scaleX(-1) translate(10px, 5px) rotate(0deg) scale(0.95); }
+  100% { transform: scaleX(-1) translate(0, 0) rotate(-5deg); }
+}
+
+.btn {
   /* Estilos visuales */
   color: #f5f5f5;
   background-color: #660000;
@@ -76,7 +197,7 @@ section button:first-of-type {
 }
 
 /* Capa sangrante */
-.btn::after, .btn_stop::after {
+.btn::after {
   content: '';
   position: absolute;
   top: 0;
