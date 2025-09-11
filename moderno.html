@@ -52,35 +52,25 @@
     <button class="back-button" onclick="goBack()">←</button>
     <header>
       <h1>El Vampiro Moderno: Un Recorrido Histórico</h1>
-      <div id="navega-temas"></div>
-      <nav>
-        <ul class="nav-botones">
-          <li><a href="#series">Series</a></li>
-          <li><a href="#videojuegos">Videojuegos</a></li>
-          <li><a href="#reinterpretaciones">Reinterpretaciones</a></li>
-          <li><a href="#literatura">Literatura Moderna</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
       <!-- Introducción -->
       <section class="vampire-lore-container">
         <h2>El Renacer del Vampiro en la Cultura Moderna</h2>
-        <!-- Imagen con funcionalidad de modal -->
-        <div class="vampire-image-wrapper">
-          <img
-            src="images/anne-rice.jpg"
-            alt="Reliquia Vampírica"
-            class="gallery-img"
-            onclick="openModal(this)"
-          />
-        </div>
-        <div class="buttons-container">
-          <button class="btn" onclick="leerTexto('intro-paragraph')">
-            Leer texto
-          </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+        <div class="marco-halloween">
+          <div class="murcielagos-adicionales"></div>
+          <figure>
+            <img
+              src="images/anne-rice.jpg"
+              alt="Escritora Anne Rice"
+              onclick="openModal(this)"
+            />
+            <figcaption>
+              Imagen de Anne Rice, autora de "Entrevista con el Vampiro", una
+              obra que redefinió el mito vampírico en la literatura moderna.
+            </figcaption>
+          </figure>
         </div>
         <p id="intro-paragraph">
           El mito del vampiro ha evolucionado desde sus orígenes góticos hasta
@@ -96,20 +86,24 @@
       <section class="vampire-lore-container">
         <h2>Series de Televisión</h2>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/dracula-bbc.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>Drácula (1960s-1970s)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>Drácula (1960s-1970s)</h3>
+              <img
+                src="images/dracula-bbc.png"
+                alt="Imagen de Drácula BBC"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Serie de la BBC que adaptó la novela de Bram Stoker,
+                consolidando la imagen del vampiro aristocrático y seductor.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-1')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-1">
             Las primeras adaptaciones televisivas de Drácula, como las
@@ -119,20 +113,25 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/dark-shadows.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>Dark Shadows (1966-1971)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>Dark Shadows (1966-1971)</h3>
+              <img
+                src="images/dark-shadows.png"
+                alt="Imagen de Dark Shadows"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Serie de culto que mezcló elementos góticos con el formato
+                diario, introduciendo a Barnabas Collins, un vampiro trágico y
+                romántico.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-2')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-2">
             Esta serie introdujo a Barnabas Collins, un vampiro trágico y
@@ -141,20 +140,26 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/buffy_vampire.jpg"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>Buffy the Vampire Slayer (1997-2003)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>Buffy the Vampire Slayer (1997-2003)</h3>
+              <img
+                src="images/buffy_vampire.jpg"
+                alt="Imagen de Buffy la Cazavampiros"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Serie icónica que redefinió el género al combinar acción,
+                romance y humor. Vampiros como Angel y Spike se convirtieron en
+                iconos culturales, explorando dilemas morales y relaciones
+                humanas.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-3')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-3">
             Buffy redefinió el género al combinar acción, romance y humor.
@@ -163,20 +168,24 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/true-blood-poster.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>True Blood (2008-2014)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>True Blood (2008-2014)</h3>
+              <img
+                src="images/true-blood-poster.png"
+                alt="Imagen de True Blood"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Serie de HBO que presentó vampiros integrados en la sociedad,
+                abordando temas de discriminación, política y sexualidad.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-4')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-4">
             Basada en las novelas de Charlaine Harris, esta serie presentó
@@ -185,20 +194,25 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/vampire-diaries.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>The Vampire Diaries (2009-2017)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>The Vampire Diaries (2009-2017)</h3>
+              <img
+                src="images/vampire-diaries.png"
+                alt="Imagen de The Vampire Diaries"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Serie basada en las novelas de L.J. Smith que popularizó el
+                triángulo amoroso entre vampiros y humanos, consolidando el
+                arquetipo del vampiro emocional.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-5')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-5">
             Con un enfoque en el romance adolescente, esta serie popularizó el
@@ -207,20 +221,25 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/shadows.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>What We Do in the Shadows (2019-Actualidad)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>What We Do in the Shadows (2019-Actualidad)</h3>
+              <img
+                src="images/shadows.png"
+                alt="Imagen What We Do in the Shadows"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Serie de comedia que ofrece una visión satírica y fresca del
+                mito vampírico, mostrando a vampiros en situaciones cotidianas y
+                absurdas.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-6')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-6">
             Esta comedia mockumentary ofrece una visión satírica y fresca del
@@ -234,20 +253,26 @@
       <section class="vampire-lore-container">
         <h2>Videojuegos</h2>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/Castlevania_1_cover.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>Castlevania (1986-Actualidad)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>Castlevania (1986-Actualidad)</h3>
+              <img
+                src="images/Castlevania_1_cover.png"
+                alt="Imagen de Castlevania"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Castlevania es una saga icónica de Konami que presentó a los
+                Belmont, cazadores de vampiros, enfrentándose a Drácula. Su
+                estética gótica y jugabilidad influyeron en generaciones de
+                juegos.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-7')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-7">
             Esta saga icónica de Konami presentó a los Belmont, cazadores de
@@ -256,20 +281,25 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/Vampire_-_The_Masquerade_–_Bloodlines_Coverart.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>Vampire: The Masquerade – Bloodlines (2004)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>Vampire: The Masquerade – Bloodlines (2004)</h3>
+              <img
+                src="images/Vampire_-_The_Masquerade_–_Bloodlines_Coverart.png"
+                alt="Imagen de Vampire The Masquerade"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Videojuego de rol que ofreció una narrativa profunda y un mundo
+                inmersivo donde los jugadores encarnan vampiros en una sociedad
+                secreta.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-8')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-8">
             Basado en el juego de rol de mesa, este título ofreció una narrativa
@@ -278,20 +308,25 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/Dawnguard.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>The Elder Scrolls V: Skyrim – Dawnguard (2012)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>The Elder Scrolls V: Skyrim – Dawnguard (2012)</h3>
+              <img
+                src="images/Dawnguard.png"
+                alt="Imagen de Dawnguard Skyrim"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Videojuego de rol que permitió a los jugadores convertirse en
+                vampiros o cazadores, integrando el mito vampírico en un mundo
+                de fantasía épica.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-9')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-9">
             La expansión Dawnguard permitió a los jugadores convertirse en
@@ -300,20 +335,25 @@
           </p>
         </article>
         <article>
-          <div class="vampire-image-wrapper">
-            <img
-              src="images/Vampyr_cover.png"
-              alt="Reliquia Vampírica"
-              class="gallery-img"
-              onclick="openModal(this)"
-            />
-          </div>
-          <h3>Vampyr (2018)</h3>
-          <div class="buttons-container">
+          <div class="marco-halloween">
+            <div class="murcielagos-adicionales"></div>
+            <figure>
+              <h3>Vampyr (2018)</h3>
+              <img
+                src="images/Vampyr_cover.png"
+                alt="Imagen de Vampyr"
+                onclick="openModal(this)"
+              />
+              <figcaption>
+                Videojuego de acción que explora la moralidad de un médico
+                convertido en vampiro durante la Londres de 1918, con decisiones
+                que afectan la narrativa y el entorno.
+              </figcaption>
+            </figure>
             <button class="btn" onclick="leerTexto('leer-texto-10')">
-              Leer texto
+              PLAY
             </button>
-            <button class="btn_stop" onclick="detenerLectura()">Detener</button>
+            <button class="btn" onclick="detenerLectura()">STOP</button>
           </div>
           <p id="leer-texto-10">
             Este RPG de acción explora la moralidad de un médico convertido en
