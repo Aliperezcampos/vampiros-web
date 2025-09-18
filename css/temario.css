@@ -1,72 +1,165 @@
-.mensaje-instruccion {
-  font-size: 1.2em;
-  color: #f5f5f5;
-  margin-bottom: 30px;
-  font-family: 'Crimson Text', serif;
-  text-shadow: 1px 1px 4px #000;
-}
 
-#texto-escritura::after {
-  content: '|';
-  animation: parpadeoCursor 1s infinite;
-}
-
-@keyframes parpadeoCursor {
-
-  0%,
-  50% {
-    opacity: 1;
-  }
-
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
-
-.temario-botones {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
+.vampire-lore-container-red {
+  max-width: 900px;
+  margin: 48px auto;
   padding: 32px;
-  background: linear-gradient(to bottom, #1c0f13, #0a0608);
-  border: 5px solid #000000;
-  border-radius: 22px;
-  box-shadow: 0 0 40px rgba(20, 10, 10, 0.6);
-  animation: fadeIn 2.5s ease-out;
-  font-family: 'Georgia', serif;
-  color: #c8b6a6;
-  max-width: 600px;
-  margin: 0 auto;
+  height: 100%;
+  background: linear-gradient(to bottom right, #0b0b13, #1a0a0f);
+  border-radius: 12px;
+  border: 2px solid #5c0d12;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  color: #e0c8b0;
+  font-family: 'UnifrakturCook', 'Georgia', serif;
+  text-align: center;
+  overflow: hidden; 
+  background-image: url('../images/paisaje-1.jpg');
+  background-size: cover;
 }
 
-.tema-boton {
-  display: block;
-  width: 90%;
-  max-width: 600px;
-  padding: 15px 15px;
-  font-size: 1.2em;
-  text-decoration: none;
-  color: #f5f5f5;
-  background-color: #330000;
-  border: 1px solid #660000;
-  border-radius: 50px;
-  box-shadow: 0 0 15px rgba(150, 0, 0, 0.6), inset 0 -5px 10px #990000;
-  font-family: 'Cinzel Decorative', serif;
-  animation: fadeIn 1.5s ease-out;
-  animation-fill-mode: both;
+/* Niebla flotante */
+.vampire-lore-container-red::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/paisaje-1.jpg');
+  background-size: cover;
+  opacity: 0.2;
+  z-index: 0;
+  animation: flotarNiebla 5s linear infinite;
 }
 
-/* Animación de entrada */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.98);
+.vampire-lore-container-red > * {
+  position: relative;
+  z-index: 1;
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+@keyframes flotarNiebla {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+/* Estilo para el título gótico */
+.titulo-gotico {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Detalle decorativo bajo el título */
+.titulo-gotico::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #a11212, transparent);
+}
+
+.item-gotico {
+  position: relative;
+  display: block;
+  padding: 18px 25px; /* Aumentado para más espacio */
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.3rem; /* Tamaño de fuente ligeramente más grande */
+  letter-spacing: 1px; /* Espaciado entre letras más amplio */
+  color: #d4b4a0; /* Tono de color más apagado y antiguo */
+  text-decoration: none; /* Asegura que no tenga subrayado por defecto */
+  
+  /* Gradiente y Borde */
+  background: linear-gradient(135deg, #120c0c 0%, #201515 100%);
+  border: 2px solid rgba(212, 175, 55, 0.4); /* Oro sutil y real */
+  border-radius: 25px; /* Un poco menos redondeado */
+  
+  /* Sombra para profundidad */
+  box-shadow: 
+    inset 0 0 10px rgba(0, 0, 0, 0.7), /* Sombra interior para dar un efecto de profundidad */
+    0 4px 15px rgba(0, 0, 0, 0.7); /* Sombra exterior más pronunciada */
+    
+  /* Texto */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 
+               0 0 10px rgb(254, 254, 254); /* Efecto de brillo sutil y oscuro */
+  
+  /* Transición para un efecto suave al pasar el cursor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Imagen de fondo */
+  background-image: url('../images/arrow-bitmap.svg');
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: bottom right;
+  background-blend-mode: multiply; /* Multiplica el color de fondo con la imagen */
+  
+  /* Pseudo-elemento para un efecto de borde místico */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto al pasar el cursor */
+.item-gotico:hover {
+  transform: translateY(-3px); /* Se eleva un poco */
+  box-shadow: 
+    inset 0 0 12px rgba(0, 0, 0, 0.8), 
+    0 6px 20px rgba(0, 0, 0, 0.9);
+  border-color: rgba(180, 150, 140, 0.5); /* Borde se hace más visible */
+}
+
+/* Efecto al hacer clic */
+.item-gotico:active {
+  transform: translateY(0); /* Vuelve a su posición original */
+  box-shadow: 
+    inset 0 0 15px rgba(0, 0, 0, 0.9), 
+    0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Pseudo-elemento para un "brillo" rojo oscuro */
+.item-gotico::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 0, 0, 0.2); /* Sutil capa rojiza y oscura */
+  z-index: 1;
+}
+
+/* Pseudo-elemento para un "marco" de sangre */
+.item-gotico::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(
+    45deg,
+    #4a0000 0%,
+    transparent 10%,
+    transparent 90%,
+    #4a0000 100%
+  );
+  z-index: 2;
+  mix-blend-mode: overlay; /* Combina el efecto de manera interesante */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .titulo-gotico {
+    font-size: 1.8rem;
+  }
+
+  .item-gotico {
+    font-size: 1rem;
+    padding: 10px 12px;
   }
 }

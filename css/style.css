@@ -10,6 +10,26 @@ body {
   opacity: 0;
 }
 
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3.5em;
+  color: #b30000;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.2rem;
+  color: #f3f0f0;
+  text-shadow: 2px 2px 4px #4A0000; /* Usando el borgoña oscuro */
+  letter-spacing: 1px;
+  margin: 2rem 0 1rem;
+  text-align: center;
+  border-bottom: 2px solid #8b0000;
+  padding-bottom: 0.5rem;
+}
+
 .vampire-lore-container {
   max-width: 900px;
   margin: 48px auto;
@@ -63,26 +83,6 @@ body {
   display: block;
   margin: 0 auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-h1 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 3.5em;
-  color: #b30000;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px #000;
-}
-
-h2 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 2.2rem;
-  color: #f3f0f0;
-  text-shadow: 2px 2px 4px #4A0000; /* Usando el borgoña oscuro */
-  letter-spacing: 1px;
-  margin: 2rem 0 1rem;
-  text-align: center;
-  border-bottom: 2px solid #8b0000;
-  padding-bottom: 0.5rem;
 }
 
 body p {
@@ -270,7 +270,7 @@ footer a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 2em;
     padding: 0 10px;
