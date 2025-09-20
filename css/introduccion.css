@@ -9,12 +9,14 @@
 
 .video-marco {
   position: relative;
-  padding-top: 56.25%;
-  /* Proporción 16:9 */
-  border: 4px solid #f70101;
+  padding-top: 56.25%; /* Proporción 16:9 */
+  border: 4px solid #f70101; /* rojo sangre */
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(90, 15, 15, 0.6);
   overflow: hidden;
+  width: 100%;
+  max-width: 720px; /* Limita el tamaño en pantallas grandes */
+  margin-top: 1rem;
 }
 
 .video-marco iframe {
@@ -47,6 +49,75 @@
   border-bottom: 1px dashed #e0a0a0;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
+
+.vampire-lore-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente si hay altura */
+  padding: 2rem;
+  text-align: center;
+}
+
+.gothic-card {
+  background-color: #0d0b10; /* negro profundo con tinte púrpura */
+  border: 2px solid #8b0000; /* rojo sangre oscuro */
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.6); /* halo sangriento */
+  color: #f5e6ff; /* blanco fantasmal */
+  font-family: 'Cinzel', serif;
+  transition: transform 0.3s ease;
+}
+
+.gothic-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(139, 0, 0, 0.8);
+}
+
+.gothic-header {
+  background: linear-gradient(to right, #3b0000, #5e0033); /* sangre + púrpura oscuro */
+  color: #ffdde1; /* rosa pálido espectral */
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #8b0000;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.gothic-item {
+  background-color: #1a0f1f; /* púrpura gótico */
+  color: #f5e6ff;
+  border-bottom: 1px solid #8b0000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gothic-item:hover {
+  background-color: #2e162c; /* púrpura más claro */
+  color: #ffdde1;
+}
+
+/* Modal */
+.gothic-modal {
+  background-color: #0d0b10;
+  border: 2px solid #8b0000;
+  color: #f5e6ff;
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+}
+
+.gothic-header {
+  background: linear-gradient(to right, #3b0000, #5e0033);
+  color: #ffdde1;
+  border-bottom: 1px solid #8b0000;
+  text-shadow: 1px 1px 2px #000;
+}
+.gothic-img {
+  border: 4px solid #8b0000;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(139, 0, 0, 0.6);
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+
+
 
 .imagen-intro {
   /* Fondo sobrio y oscuro para contrastar con la imagen */
@@ -166,19 +237,6 @@
   max-width: 600px;
 }
 
-blockquote {
-    font-style: italic;
-    color: #c0c0c0;
-    border-left: 6px solid #8b0000;
-    padding-left: 25px;
-    margin: 30px 0;
-    background: rgba(75, 0, 130, 0.2);
-    border-radius: 0;
-    position: relative;
-    box-shadow: inset 0 0 20px rgba(139, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.9);
-    font-size: 1.3em;
-}
-
 /* Curiosidades vampíricas */
 .curiosidades {
   max-width: 800px;
@@ -239,68 +297,65 @@ textarea {
 }
 
 /*INICIO DE CARRUSEL*/
-* { box-sizing: border-box; }
-
-.slideshow-container {
+#carouselExampleFade {
+  border: 2px solid #a3122f;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(90, 0, 40, 0.6);
+  background: radial-gradient(circle at center, #1b0a0f 0%, #000000 100%);
+  overflow: hidden;
   max-width: 800px;
+  margin: 0 auto;
   position: relative;
-  margin: auto;
-  border: 3px solid #3a003a;
-  box-shadow: 0 0 20px rgba(166, 76, 166, 0.6);
 }
 
-.mySlides {
-  display: none;
-}
-
-.mySlides img {
+/* Garantiza tamaño uniforme */
+.carousel-inner {
   width: 100%;
-  display: block;
+  height: 500px; /* altura fija para todas las imágenes */
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorte elegante sin deformar */
+  border-radius: 8px;
+  filter: brightness(0.85) contrast(1.2) saturate(1.1);
+  box-shadow: 0 0 24px rgba(163, 18, 47, 0.6);
+  transition: transform 0.5s ease;
+}
+
+/* Animación vampírica */
+.carousel-item.active img {
+  animation: vamp-glow 3s ease-in-out infinite;
+}
+
+@keyframes vamp-glow {
+  0% {
+    box-shadow: 0 0 16px rgba(163, 18, 47, 0.5), 0 0 32px rgba(163, 18, 47, 0.3), inset 0 0 8px rgba(255, 220, 240, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 36px rgba(163, 18, 47, 0.9), 0 0 64px rgba(163, 18, 47, 0.6), inset 0 0 18px rgba(255, 220, 240, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 16px rgba(163, 18, 47, 0.5), 0 0 32px rgba(163, 18, 47, 0.3), inset 0 0 8px rgba(255, 220, 240, 0.15);
+  }
 }
 
 /* Botones de navegación */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 16px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.3s;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background: rgba(0,0,0,0.4);
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(166, 76, 166, 0.8);
-}
-
-/* Puntos indicadores */
-.dot-container {
-  text-align: center;
-  padding: 10px;
-  background: #1a001a;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 4px;
-  background-color: #bbb;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #a3122f;
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
+  box-shadow: 0 0 12px rgba(163, 18, 47, 0.6);
 }
 
-.active, .dot:hover {
-  background-color: #a64ca6;
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
 }
 /*FIN DE CARRUSEL*/

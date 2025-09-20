@@ -93,35 +93,47 @@ body p {
   text-align: justify;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  font-family: 'Cinzel', serif; /* tipografía con aire gótico */
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  color: #f5e6ff; /* texto claro sobre fondo oscuro */
-  background: linear-gradient(145deg, #3a003a, #5e1a5e); /* degradado púrpura profundo */
-  border: 2px solid #a64ca6; /* borde púrpura brillante */
-  border-radius: 8px;
+@keyframes vamp-glow {
+  0% {
+    box-shadow:
+      0 0 16px rgba(163, 18, 47, 0.5),
+      0 0 32px rgba(163, 18, 47, 0.3),
+      inset 0 0 8px rgba(255, 220, 240, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 36px rgba(163, 18, 47, 0.9),
+      0 0 64px rgba(163, 18, 47, 0.6),
+      inset 0 0 18px rgba(255, 220, 240, 0.35);
+  }
+  100% {
+    box-shadow:
+      0 0 16px rgba(163, 18, 47, 0.5),
+      0 0 32px rgba(163, 18, 47, 0.3),
+      inset 0 0 8px rgba(255, 220, 240, 0.15);
+  }
+}
+
+.gothic-btn {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #f8d6e0;
+  background: linear-gradient(145deg, #1b0a0f, #3c0d1f);
+  border: 2px solid #a3122f;
+  border-radius: 6px;
+  padding: 14px 36px;
   text-transform: uppercase;
-  text-shadow: 0 0 6px rgba(166, 76, 166, 0.8);
-  box-shadow: 0 0 12px rgba(80, 0, 80, 0.6), inset 0 0 8px rgba(255, 200, 255, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 30px;
+  text-shadow: 0 0 6px #a3122f, 0 0 2px #000;
+  backdrop-filter: blur(2px);
+  animation: vamp-glow 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
 }
 
-.btn:hover {
-  background: linear-gradient(145deg, #5e1a5e, #3a003a);
-  color: #ffffff;
-  box-shadow: 0 0 18px rgba(166, 76, 166, 0.9), inset 0 0 12px rgba(255, 200, 255, 0.3);
-  transform: scale(1.05);
+.gothic-btn:active {
+  transform: scale(0.96);
 }
 
-.btn:active {
-  transform: scale(0.98);
-  box-shadow: 0 0 8px rgba(166, 76, 166, 0.7), inset 0 0 6px rgba(255, 200, 255, 0.2);
-}
 
 .gallery-img {
   border: 8px solid #5a0a0a;
@@ -137,58 +149,6 @@ body p {
     0 0 35px rgba(250, 0, 0, 0.9),
     /* Intensifica el resplandor */
     0 0 15px rgba(0, 0, 0, 0.8);
-}
-
-/* Lista principal */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 30px auto;
-  max-width: 800px;
-}
-
-/* Elementos de la lista */
-li {
-  position: relative;
-  background: linear-gradient(145deg, #0b000b, #1a001a); /* degradado púrpura oscuro */
-  color: #e6d9f0; /* gris-lavanda claro */
-  border: 1px solid #3a003a; /* borde púrpura profundo */
-  margin-bottom: 20px;
-  padding: 25px 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(166, 76, 166, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  font-family: 'Cinzel', serif; /* tipografía gótica elegante */
-  line-height: 1.6;
-}
-
-/* Hover dramático */
-li:hover {
-  transform: translateY(-5px);
-  border-color: #a64ca6; /* acento púrpura brillante */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85), inset 0 0 15px rgba(166, 76, 166, 0.4);
-}
-
-/* Viñeta gótica */
-li::before {
-  content: "✦"; /* símbolo estrellado místico */
-  color: #a64ca6; /* púrpura brillante */
-  font-size: 1.4em;
-  font-weight: bold;
-  position: absolute;
-  left: -25px;
-  top: 50%;
-  transform: translateY(-50%);
-  text-shadow: 0 0 6px rgba(166, 76, 166, 0.8);
-}
-
-/* Títulos dentro de la lista */
-li b {
-  font-family: 'UnifrakturCook', cursive; /* tipografía gótica ornamental */
-  font-size: 1.2em;
-  color: #d9a6ff; /* púrpura claro */
-  display: block;
-  margin-bottom: 5px;
-  text-shadow: 0 0 6px rgba(166, 76, 166, 0.7);
 }
 
 
