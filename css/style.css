@@ -115,7 +115,7 @@ body p {
 }
 
 .gothic-btn {
-  font-family: 'UnifrakturMaguntia', cursive;
+  font-family: 'Cinzel Decorative', serif;
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: #f8d6e0;
@@ -239,13 +239,6 @@ footer a:hover {
   p {
     font-size: 1em;
     padding: 0 15px;
-  }
-
-  .btn {
-    font-size: 1em;
-    padding: 10px 12px;
-    margin-left: 20%;
-    margin-right: 20%;
   }
 
   .bat {

@@ -1,12 +1,5 @@
 
-.video-titulo {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
-  color: #e0d6d6;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 5px #5a0f0f;
-}
-
+/* Estilos generales */
 .video-marco {
   position: relative;
   padding-top: 56.25%; /* Proporción 16:9 */
@@ -42,14 +35,6 @@
   line-height: 1.6;
 }
 
-.video-cita a {
-  color: #e0a0a0;
-  text-decoration: none;
-  font-style: italic;
-  border-bottom: 1px dashed #e0a0a0;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
 .vampire-lore-container{
   display: flex;
   flex-direction: column;
@@ -59,6 +44,7 @@
   text-align: center;
 }
 
+/*Apartado que 'Qué define a un vampiro'*/
 .gothic-card {
   background-color: #0d0b10; /* negro profundo con tinte púrpura */
   border: 2px solid #8b0000; /* rojo sangre oscuro */
@@ -94,50 +80,121 @@
   color: #ffdde1;
 }
 
-/* Modal */
+.btn.btn-danger.halloween {
+  background: linear-gradient(145deg, #ff6f00, #4a1e00);
+  color: #fff8e6;
+  border: 1px solid #ff8800;
+  border-radius: 0.3rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 3px #4a1e00;
+  box-shadow:
+    inset 0 0 0.5em rgba(255, 140, 0, 0.2),
+    0 0 0.5em rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.btn-danger.halloween:hover {
+  background: radial-gradient(circle at center, #ff8800 0%, #4a1e00 100%);
+  color: #fff;
+  box-shadow:
+    inset 0 0 0.8em rgba(255, 140, 0, 0.3),
+    0 0 1em rgba(255, 140, 0, 0.4),
+    0 0 2em rgba(0, 0, 0, 0.8);
+  transform: scale(1.04);
+}
+
+/* Mapa Panzoom */
+.imagen-lightbox {
+  overflow: visible !important;
+  position: static !important;
+  z-index: auto !important;
+}
+
+.lb-close {
+  display: block !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+
+/* Estilo GIF */
+.img-fluid {
+  border: 3px solid #ff6f00; /* naranja calabaza */
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.6);
+  animation: halloweenGlow 2s infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+/* Animación de brillo pulsante */
+@keyframes halloweenGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 111, 0, 0.4),
+                0 0 20px rgba(255, 111, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8),
+                0 0 30px rgba(255, 140, 0, 0.4);
+  }
+}
+
+
+/* ===== MODAL GÓTICO - ESTILO MEJORADO ===== */
+
+/* Contenido del modal */
 .gothic-modal {
   background-color: #0d0b10;
   border: 2px solid #8b0000;
   color: #f5e6ff;
-  box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+  box-shadow: 0 0 30px rgba(139, 0, 0, 0.8);
+  max-height: 90vh; /* Evita que el modal sea más alto que la pantalla */
 }
 
+/* Header del modal */
 .gothic-header {
   background: linear-gradient(to right, #3b0000, #5e0033);
   color: #ffdde1;
   border-bottom: 1px solid #8b0000;
   text-shadow: 1px 1px 2px #000;
+  padding: 1.25rem 1.5rem; /* Asegura espacio consistente */
 }
+
+/* Cuerpo del modal: ¡CRUCIAL para scroll interno! */
+.modal-body {
+  overflow-y: auto; /* Habilita scroll si el contenido es largo */
+  max-height: 70vh; /* Limita altura para dejar espacio al header/footer */
+  padding: 1.5rem;
+}
+
+/* Imagen dentro del modal */
 .gothic-img {
   border: 4px solid #8b0000;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(139, 0, 0, 0.6);
-  max-height: 60vh;
-  object-fit: cover;
+  max-height: 50vh; /* Reduce un poco para dejar espacio al texto */
+  width: auto;
+  max-width: 100%; /* ¡Imprescindible para responsive! */
+  height: auto; /* Mantiene proporción */
+  display: block;
+  margin: 0 auto 1.5rem; /* Centra la imagen y añade espacio inferior */
+  object-fit: contain; /* Mejor que "cover" para no recortar contenido */
 }
 
+/* Texto en cursiva (citas) */
+.modal-body em,
+.modal-body blockquote {
+  font-style: italic;
+  color: #ffdde1;
+  font-weight: 500;
+}
 
-
-
-.imagen-intro {
-  /* Fondo sobrio y oscuro para contrastar con la imagen */
-  background-color: #0d0d0d;
-  color: #c4c4c4; /* Texto gris claro para legibilidad */
-  
-  /* Borde con apariencia de piedra o metal oscuro */
-  border: 4px ridge #2a2a2a;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-  
-  /* Tipografía gótica o con estilo de serif antiguo */
-  font-family: 'Times New Roman', Times, serif; 
-  
-  /* Alineación para centrar la imagen dentro */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  /* Añade un poco de espacio interno para que la imagen no toque los bordes */
-  padding: 30px;
+/* Opcional: animación de entrada suave */
+.modal.fade .modal-dialog {
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+.modal.show .modal-dialog {
+  transform: translateY(0);
 }
 
 /* Dato vampírico destacado */
