@@ -9,10 +9,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/audio_control.css" />
     <link rel="stylesheet" href="css/origenes.css" />
+    <link rel="stylesheet" href="css/audio_control.css" />
     <link rel="stylesheet" href="css/back_button.css" />
-    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/leer_detener.css" />
     <!-- Google Analytics -->
     <script
@@ -31,12 +30,6 @@
   </head>
 
   <body>
-    <!-- Modal oculto -->
-    <div id="vampireModal" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modalImg" />
-      <div id="caption"></div>
-    </div>
     <!-- Imagen para activar la melodía -->
     <div class="audio-control">
       <img
@@ -54,18 +47,21 @@
 
     <h1>Orígenes del Mito Vampírico</h1>
     <p>Un recorrido por las primeras figuras y relatos de muertos vivientes.</p>
-    <div id="navega-temas">
-      <nav>
-        <ul class="nav-botones">
-          <li><a href="#origenes">·El Mito</a></li>
-          <li><a href="#lamia">·Lamia</a></li>
-          <li><a href="#lilith">·Lilith</a></li>
-          <li><a href="#otros">·Otros Muertos Vivientes</a></li>
-        </ul>
-      </nav>
-    </div>
 
-    <main>
+      <!-- SECTION 'GIF Y CITA' -->
+      <section class="vampire-lore-container">
+        <img
+          src="images/gif/Femme Fatale Halloween GIF by patternbase.gif"
+          alt="Llama ritual vampírica"
+          class="img-fluid"
+        />
+
+        <blockquote>
+          “Los vampiros son el espejo de nuestros deseos más oscuros.” – Anne
+          Rice
+        </blockquote>
+      </section>
+      <!-- SECTION 'ORIGENES' -->
       <section class="vampire-lore-container">
         <div class="niebla-flotante"></div>
         <h2>El Origen del Mito Vampírico</h2>
@@ -124,7 +120,7 @@
           la alienación, manteniendo su relevancia cultural.
         </p>
       </section>
-
+      <!-- SECTION 'LAMIA' -->
       <section class="vampire-lore-container">
         <h2>Lamia</h2>
 
@@ -169,7 +165,7 @@
           <strong>mitos vampíricos</strong> posteriores.
         </p>
       </section>
-
+      <!-- SECTION 'LILITH' -->
       <section class="vampire-lore-container">
         <h2>Lilith</h2>
 
@@ -223,7 +219,7 @@
           <strong>demonios femeninos</strong> en la cultura popular.
         </p>
       </section>
-
+      <!-- SECTION 'OTROS MUERTOS VIVIENTES' -->
       <section class="vampire-lore-container">
         <h1>Otros Muertos Vivientes Antiguos</h1>
         <article>
@@ -315,9 +311,7 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Mi Página de Mitos. Todos los derechos reservados.</p>
-    </footer>
+    <footer></footer>
 
     <script src="js/main.js"></script>
   </body>
