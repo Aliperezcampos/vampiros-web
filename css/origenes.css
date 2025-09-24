@@ -30,6 +30,7 @@ figcaption {
   justify-content: center; /* Centra verticalmente si hay altura */
   padding: 2rem;
   text-align: center;
+  overflow: visible;
 }
 
 /* Estilo GIF */
@@ -43,6 +44,52 @@ figcaption {
   animation: halloweenGlow 2s infinite alternate;
   transition: transform 0.3s ease;
 }
+
+/* FLEURON DIVIDER <H1> */
+.titulo-gotico {
+  font-family: 'Cinzel Decorative', serif; /* o UnifrakturCook si prefieres más teatralidad */
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 0.2em;
+  color: #b30000;
+  position: relative;
+}
+
+.fleuron-gotico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.2em; /* antes era 0 o muy bajo */
+  margin-bottom: 1em;
+  overflow: visible;
+}
+
+
+.fleuron-gotico svg {
+  width: 220px; /* ajusta según tu diseño */
+  height: auto;
+  stroke: #4B1E2F; /* burdeos oscuro vampírico */
+  fill: none;
+  animation: revelarFleuron 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+#path1 {
+  animation: revelarFleuron 5s ease-in-out infinite;
+}
+
+
+@keyframes revelarFleuron {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 /* Animación de brillo pulsante */
 @keyframes halloweenGlow {
