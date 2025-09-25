@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/audio_control.css" />
     <link rel="stylesheet" href="css/back_button.css" />
-    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/leer_detener.css" />
     <!-- Google Analytics -->
     <script
@@ -29,12 +28,6 @@
     </script>
   </head>
   <body>
-    <!-- Modal oculto -->
-    <div id="vampireModal" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modalImg" />
-      <div id="caption"></div>
-    </div>
     <!-- Imagen para activar la melodía -->
     <div class="audio-control">
       <img
@@ -51,78 +44,93 @@
     <button class="back-button" onclick="goBack()">←</button>
     <header>
       <h1>El Vampiro como Símbolo: Sexualidad, Poder y Enfermedad</h1>
-      <nav>
-        <ul>
-          <li><a href="#introduccion">Introducción</a></li>
-          <li><a href="#sexualidad">Sexualidad</a></li>
-          <li><a href="#poder">Poder</a></li>
-          <li><a href="#enfermedad">Enfermedad</a></li>
-          <li><a href="#inmortalidad">Inmortalidad y Existencialismo</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
+      <!-- SECCION: GIF -->
+      <section class="vampire-lore-container-gif">
+        <img
+          src="images/gif/Art Smile GIF by Brink.gif"
+          alt="Llama ritual vampírica"
+          class="img-fluid"
+        />
+
+        <blockquote>
+          “Los vampiros son el espejo de nuestros deseos más oscuros.” – Anne
+          Rice
+        </blockquote>
+        <a href="explora.html" class="gothic-btn">Explora el Origen del Mito</a>
+      </section>
+
       <!-- Introducción -->
       <section class="vampire-lore-container">
         <h2>El Vampiro: Un Espejo de la Psique Humana</h2>
-        <!-- Imagen con funcionalidad de modal -->
         <div class="vampire-image-wrapper">
           <img
             src="images/vampire-kiss.jpg"
             alt="Reliquia Vampírica"
             class="gallery-img"
-            onclick="openModal(this)"
           />
         </div>
-        <div class="buttons-container">
-          <button class="btn" onclick="leerTexto('introduccion')">
-            Leer texto
-          </button>
-          <button class="btn_stop" onclick="detenerLectura()">Detener</button>
-        </div>
+        <button class="btn" onclick="leerTexto('introduccion')">PLAY</button>
+        <button class="btn" onclick="detenerLectura()">STOP</button>
         <p id="introduccion">
-          El mito del vampiro trasciende el simple relato de terror para
+          El <strong>vampiro</strong> trasciende el relato de terror para
           convertirse en un símbolo multifacético que refleja los deseos,
-          temores y conflictos de la humanidad. Desde sus orígenes folclóricos
-          hasta su reinvención moderna, el vampiro encarna temas universales
-          como la sexualidad, el poder, la enfermedad y la lucha por la
-          inmortalidad. Este análisis explora cómo estas temáticas se entrelazan
-          en el mito vampírico, ofreciendo una mirada profunda a su significado
-          cultural y psicológico.
+          temores y conflictos de la humanidad. Desde sus orígenes
+          <strong>folclóricos</strong> hasta su reinvención moderna, el vampiro
+          encarna temas universales como la sexualidad, el poder, la enfermedad
+          y la lucha por la <strong>inmortalidad</strong>. Este análisis explora
+          cómo estas temáticas se entrelazan en el mito vampírico, ofreciendo
+          una mirada profunda a su significado <strong>cultural</strong> y
+          psicológico.
         </p>
       </section>
 
       <!-- Sexualidad -->
       <section class="vampire-lore-container">
         <h2>Sexualidad: El Abrazo Prohibido</h2>
+        <div class="vampire-image-wrapper">
+          <img
+            src="images/vamp-1.jpg"
+            alt="Reliquia Vampírica"
+            class="gallery-img"
+          />
+        </div>
+        <button class="btn" onclick="leerTexto('erotico')">PLAY</button>
+        <button class="btn" onclick="detenerLectura()">STOP</button>
         <article>
           <h3>El Vampiro como Símbolo Erótico</h3>
           <p id="erotico">
-            El vampiro es un arquetipo de seducción, cuya mordida simboliza un
-            acto íntimo y transgresor. En obras como <em>Drácula</em> de Bram
-            Stoker (1897), las vampiresas seducen a sus víctimas con un erotismo
+            El <strong>vampiro</strong> es un arquetipo de
+            <strong>seducción</strong>, cuya mordida simboliza un acto íntimo y
+            transgresor. En obras como <em>Drácula</em> de Bram Stoker (1897),
+            las vampiresas seducen a sus víctimas con un
+            <strong>erotismo</strong>
             que desafía las normas victorianas, representando el miedo a la
-            sexualidad femenina desatada.
+            <strong>sexualidad</strong> femenina desatada.
           </p>
         </article>
         <article>
           <h3>Deseo y Represión</h3>
           <p>
-            La mordida vampírica, un intercambio de fluidos, evoca metáforas
-            sexuales que exploran deseos reprimidos. En
+            La <strong>mordida</strong> vampírica, un intercambio de fluidos,
+            evoca metáforas sexuales que exploran
+            <strong>deseos</strong> reprimidos. En
             <em>Interview with the Vampire</em> (1976) de Anne Rice, la relación
-            entre Louis y Lestat refleja tensiones homoeróticas, rompiendo
-            tabúes y explorando la ambigüedad del deseo.
+            entre Louis y Lestat refleja tensiones
+            <strong>homoeróticas</strong>, rompiendo tabúes y explorando la
+            ambigüedad del <strong>deseo</strong>.
           </p>
         </article>
         <article>
           <h3>Modernidad y Liberación Sexual</h3>
           <p>
-            En series como <em>True Blood</em> (2008-2014), los vampiros
-            representan minorías sexuales, con su "salida del ataúd" como
+            En series como <em>True Blood</em> (2008-2014), los
+            <strong>vampiros</strong> representan
+            <strong>minorías</strong> sexuales, con su "salida del ataúd" como
             metáfora de la aceptación de identidades marginadas. El vampiro
-            moderno abraza la sexualidad fluida, desafiando estructuras
-            patriarcales.
+            moderno abraza la <strong>sexualidad</strong> fluida, desafiando
+            estructuras <strong>patriarcales</strong>.
           </p>
         </article>
       </section>
@@ -130,32 +138,41 @@
       <!-- Poder -->
       <section class="vampire-lore-container">
         <h2>Poder: Dominación y Control</h2>
+        <div class="vampire-image-wrapper">
+          <img
+            src="images/vamp-2.jpg"
+            alt="Reliquia Vampírica"
+            class="gallery-img"
+          />
+        </div>
+        <button class="btn" onclick="leerTexto('poder')">PLAY</button>
+        <button class="btn" onclick="detenerLectura()">STOP</button>
         <article>
           <h3>El Vampiro Aristocrático</h3>
-          <p>
-            Drácula, con su castillo y carisma, encarna el poder feudal y la
-            dominación psicológica. Su capacidad de controlar mentes refleja el
-            miedo a la autoridad opresiva, un tema recurrente en el gótico del
-            siglo XIX.
+          <p id="poder">
+            <strong>Drácula</strong>, con su castillo y carisma, encarna el
+            poder feudal y la dominación psicológica. Su capacidad de controlar
+            mentes refleja el miedo a la autoridad opresiva, un tema recurrente
+            en el gótico del siglo XIX.
           </p>
         </article>
         <article>
           <h3>El Vampiro como Rebelde</h3>
           <p>
-            En <em>Vampire: The Masquerade</em> (1991), los vampiros forman
-            clanes con jerarquías complejas, simbolizando luchas de poder
-            político. El vampiro rebelde, como Spike en
-            <em>Buffy the Vampire Slayer</em>, desafía estas estructuras,
-            representando la resistencia contra la opresión.
+            En <em>Vampire: The Masquerade</em> (1991), los
+            <strong>vampiros</strong> forman clanes con jerarquías complejas,
+            simbolizando luchas de poder político. El vampiro rebelde, como
+            Spike en <em>Buffy the Vampire Slayer</em>, desafía estas
+            estructuras, representando la resistencia contra la opresión.
           </p>
         </article>
         <article>
           <h3>Poder y Moralidad</h3>
           <p>
-            El vampiro moderno, como en <em>Vampyr</em> (2018), enfrenta dilemas
-            éticos sobre el uso de su poder. La capacidad de decidir quién vive
-            o muere plantea preguntas sobre la responsabilidad y la corrupción
-            inherente al poder absoluto.
+            El <strong>vampiro</strong> moderno, como en <em>Vampyr</em> (2018),
+            enfrenta dilemas éticos sobre el uso de su poder. La capacidad de
+            decidir quién vive o muere plantea preguntas sobre la
+            responsabilidad y la corrupción inherente al poder absoluto.
           </p>
         </article>
       </section>
@@ -163,30 +180,41 @@
       <!-- Enfermedad -->
       <section class="vampire-lore-container">
         <h2>Enfermedad: La Maldición del Cuerpo</h2>
+        <div class="vampire-image-wrapper">
+          <img
+            src="images/vamp-3.jpg"
+            alt="Reliquia Vampírica"
+            class="gallery-img"
+          />
+        </div>
+        <button class="btn" onclick="leerTexto('enfermedad')">PLAY</button>
+        <button class="btn" onclick="detenerLectura()">STOP</button>
         <article>
           <h3>El Vampiro y la Plaga</h3>
-          <p>
-            En el folclore, los vampiros estaban ligados a epidemias, como la
-            peste. Su imagen de cuerpos pálidos y consumidos refleja el miedo a
-            la enfermedad contagiosa, un eco de la tuberculosis en el siglo XIX.
+          <p id="enfermedad">
+            En el <strong>folclore</strong>, los vampiros estaban ligados a
+            epidemias, como la peste. Su imagen de cuerpos pálidos y consumidos
+            refleja el miedo a la enfermedad contagiosa, un eco de la
+            tuberculosis en el siglo XIX.
           </p>
         </article>
         <article>
           <h3>El Vampiro como Metáfora del SIDA</h3>
           <p>
-            En los años 80 y 90, el vampiro se asoció con el SIDA debido a la
-            transmisión por sangre. Películas como <em>The Lost Boys</em> (1987)
-            reflejan el estigma social hacia las enfermedades de transmisión
-            sexual, con vampiros como portadores de una "maldición" temida.
+            En los años 80 y 90, el <strong>vampiro</strong> se asoció con el
+            <strong>SIDA</strong> debido a la transmisión por sangre. Películas
+            como <em>The Lost Boys</em> (1987) reflejan el estigma social hacia
+            las enfermedades de transmisión sexual, con vampiros como portadores
+            de una "maldición" temida.
           </p>
         </article>
         <article>
           <h3>Adicción y Dependencia</h3>
           <p>
-            La sed de sangre vampírica simboliza la adicción, un tema explorado
-            en <em>True Blood</em>, donde la sangre de vampiro es una droga.
-            Este paralelismo refleja luchas humanas con la dependencia y la
-            pérdida de control.
+            La <strong>sed</strong> de sangre vampírica simboliza la
+            <strong>adicción</strong>, un tema explorado en <em>True Blood</em>,
+            donde la sangre de vampiro es una droga. Este paralelismo refleja
+            luchas humanas con la dependencia y la pérdida de control.
           </p>
         </article>
       </section>
@@ -194,12 +222,21 @@
       <!-- Inmortalidad y Existencialismo -->
       <section class="vampire-lore-container">
         <h2>Inmortalidad y Existencialismo: La Carga Eterna</h2>
-
+        <div class="vampire-image-wrapper">
+          <img
+            src="images/vamp-4.jpg"
+            alt="Reliquia Vampírica"
+            class="gallery-img"
+          />
+        </div>
+        <button class="btn" onclick="leerTexto('inmortalidad')">PLAY</button>
+        <button class="btn" onclick="detenerLectura()">STOP</button>
         <article>
           <h3>La Inmortalidad como Condena</h3>
-          <p>
-            El vampiro, como en <em>Only Lovers Left Alive</em> (2013), enfrenta
-            el peso de la eternidad. La inmortalidad simboliza la lucha
+          <p id="inmortalidad">
+            El <strong>vampiro</strong>, como en
+            <em>Only Lovers Left Alive</em> (2013), enfrenta el peso de la
+            eternidad. La <strong>inmortalidad</strong> simboliza la lucha
             existencial por encontrar propósito en un mundo cambiante,
             reflejando ansiedades humanas sobre el tiempo y la muerte.
           </p>
@@ -207,19 +244,20 @@
         <article>
           <h3>El Vampiro y la Alienación</h3>
           <p>
-            Los vampiros, aislados de la humanidad, encarnan la alienación. En
-            <em>The Vampire Chronicles</em> de Anne Rice, personajes como Louis
-            reflexionan sobre su desconexión, simbolizando la soledad moderna y
-            la búsqueda de identidad.
+            Los <strong>vampiros</strong>, aislados de la humanidad, encarnan la
+            <strong>alienación</strong>. En <em>The Vampire Chronicles</em> de
+            Anne Rice, personajes como Louis reflexionan sobre su desconexión,
+            simbolizando la soledad moderna y la búsqueda de identidad.
           </p>
         </article>
         <article>
           <h3>Transhumanismo y Transformación</h3>
           <p>
-            El vampiro moderno, como en <em>A Discovery of Witches</em>,
-            representa aspiraciones transhumanistas de superar las limitaciones
-            humanas. Sin embargo, esta transformación viene con un costo moral,
-            cuestionando si la inmortalidad es una bendición o una maldición.
+            El <strong>vampiro</strong> moderno, como en
+            <em>A Discovery of Witches</em>, representa aspiraciones
+            transhumanistas de superar las limitaciones humanas. Sin embargo,
+            esta transformación viene con un costo moral, cuestionando si la
+            <strong>inmortalidad</strong> es una bendición o una maldición.
           </p>
         </article>
       </section>

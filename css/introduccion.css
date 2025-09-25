@@ -35,36 +35,6 @@
   line-height: 1.6;
 }
 
-.vampire-lore-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente si hay altura */
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Estilo GIF */
-.img-fluid {
-  border: 3px solid #ff6f00; /* naranja calabaza */
-  border-radius: 0.5rem;
-  box-shadow: 0 0 15px rgba(255, 111, 0, 0.6);
-  animation: halloweenGlow 2s infinite alternate;
-  transition: transform 0.3s ease;
-}
-
-/* Animación de brillo pulsante */
-@keyframes halloweenGlow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 111, 0, 0.4),
-                0 0 20px rgba(255, 111, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8),
-                0 0 30px rgba(255, 140, 0, 0.4);
-  }
-}
-
 /*Apartado que 'Qué define a un vampiro'*/
 .gothic-card {
   background-color: #0d0b10; /* negro profundo con tinte púrpura */

@@ -135,10 +135,3 @@ strong::after {
         padding: 10px 20px;
     }
 }
-
-@media (max-width: 600px) {
-  .btn-melodia {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-}
