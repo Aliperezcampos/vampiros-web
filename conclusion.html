@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Legado Inmortal: El Mito Vampírico y su Vigencia Eterna</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Text&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/audio_control.css" />
+    <link rel="stylesheet" href="css/back_button.css" />
+    <link rel="stylesheet" href="css/leer_detener.css" />
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-J7DY7SQ72H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-J7DY7SQ72H");
+    </script>
+  </head>
+  <body>
+    <!-- Imagen para activar la melodía -->
+    <div class="audio-control">
+      <img
+        src="images/altavoz_gotico.png"
+        alt="Control de música"
+        id="activar-musica"
+        class="imagen-musical"
+      />
+      <div class="caption-musical">Presiona para música</div>
+    </div>
+
+    <audio id="bg-music" src="music/relaxing.mp3"></audio>
+
+    <button class="back-button" onclick="goBack()">←</button>
+    <!-- SECCION: GIF -->
+    <section class="vampire-lore-container-gif">
+      <img
+        src="images/gif/bat-eyes.gif"
+        alt="Llama ritual vampírica"
+        class="img-fluid"
+      />
+
+      <blockquote>
+        “Los vampiros son el espejo de nuestros deseos más oscuros.” – Anne Rice
+      </blockquote>
+    </section>
+    <article>
+      <h1>El Legado Inmortal: El Mito Vampírico y su Vigencia Eterna</h1>
+      <!-- SECCION ESENCIA DE VAMPIRO -->
+      <section class="vampire-lore-container">
+        <h2>La Esencia del Vampiro y su Fascinación Eterna</h2>
+        <div class="vampire-image-wrapper">
+          <img
+            src="images/vamp-4.jpg"
+            alt="Reliquia Vampírica"
+            class="gallery-img"
+          />
+        </div>
+        <button class="btn" onclick="leerTexto('escencia-vampiro')">
+          PLAY
+        </button>
+        <button class="btn" onclick="detenerLectura()">STOP</button>
+        <p id="escencia-vampiro">
+          En las sombras de la noche, donde el velo entre la vida y la muerte se
+          adelgaza, emerge la figura del <strong>vampiro</strong>: un ser
+          eterno, sediento de sangre y envuelto en un aura de misterio seductor.
+          ¿Qué es un vampiro? En esencia, es un
+          <strong>cadáver reanimado</strong> que sobrevive chupando la vitalidad
+          de los vivos, un parásito sobrenatural que desafía las fronteras de la
+          existencia. Su fascinación radica en esa ambivalencia: representa el
+          terror a lo desconocido, pero también el anhelo de
+          <strong>inmortalidad</strong>, el deseo prohibido y la transgresión de
+          normas sociales. En un mundo obsesionado con la juventud perpetua y el
+          control sobre el destino, el vampiro nos hipnotiza porque encarna
+          nuestras contradicciones más profundas: la muerte como liberación
+          erótica, el <strong>poder</strong> como adicción destructiva.
+        </p>
+      </section>
+
+      <!-- SECCION ORIGENES -->
+      <section class="vampire-lore-container">
+        <h2>Orígenes Ancestrales del Mito</h2>
+        <p>
+          Los orígenes del mito se remontan a la antigüedad, entrelazados con
+          creencias ancestrales sobre la <strong>no-muerte</strong>. En la
+          Mesopotamia de hace cuatro milenios, los demonios **lilû** succubaban
+          la sangre de los durmientes, prefigurando al vampiro moderno. En el
+          antiguo Egipto y Grecia, espíritus errantes como los empusas o
+          lestrigones devoraban almas, mientras que en la India y China, vetalas
+          y <strong>jiangshi</strong> —cadáveres saltarines— acechaban a los
+          vivos. Estos relatos primitivos surgen de un temor universal: la
+          corrupción del cuerpo post mortem y la ira de los ancestros no
+          apaciguados. No son meras supersticiones; son metáforas de la
+          <strong>fragilidad humana</strong> ante la podredumbre y el más allá.
+        </p>
+      </section>
+
+      <!-- SECCION FOLKLORE -->
+      <section class="vampire-lore-container">
+        <h2>El Folklore Europeo: Raíces en el Terror Rural</h2>
+        <p>
+          El folklore europeo, especialmente del <strong>siglo XVIII</strong>,
+          cristalizó estas leyendas en una narrativa colectiva de horror rural.
+          En los <strong>Balcanes</strong> —Serbia, Rumania y Hungría—, el
+          vampirismo se asoció a plagas y guerras, como en el caso de Arnold
+          Paole, un supuesto upir cuya tumba profanada en 1720 inspiró tratados
+          médicos y eclesiásticos. Los vampiros del folclore no eran
+          aristócratas elegantes, sino <strong>campesinos hinchados</strong>,
+          con uñas y cabello crecidos, que regresaban para atormentar a sus
+          deudos. Rituales como clavar estacas o decapitar cuerpos reflejaban un
+          catarsis social: exorcizar el miedo a la hambruna, la tuberculosis o
+          el colera, atribuidos a estos "<strong>no-muertos</strong>". Este
+          imaginario popular, documentado en crónicas como las de Dom Augustin
+          Calmet, transformó el mito en un espejo de las ansiedades colectivas
+          de una Europa en transición.
+        </p>
+      </section>
+
+      <!-- SECCION LITERATURA -->
+      <section class="vampire-lore-container">
+        <h2>La Literatura Gótica: Del Espectro al Icono Romántico</h2>
+        <p>
+          La literatura gótica del siglo XIX elevó al vampiro de espectro
+          folclórico a <strong>icono romántico</strong>. Lord Byron, con su
+          fragmento vampírico en <em>El enterrado vivo</em> (1819), y John
+          Polidori en <em>El vampiro</em> (1819), inspirados en la Villa
+          Diodati, lo moldearon como un dandi melancólico, un rebelde byroniano
+          que seduce y destruye. Pero fue Bram Stoker quien lo inmortalizó en
+          <strong><em>Drácula</em> (1897)</strong>: el conde transilvano, con su
+          castillo laberíntico y su carga erótica, fusiona el exotismo oriental
+          con el imperialismo victoriano. Aquí, el vampiro no solo devora;
+          simboliza la invasión cultural y la
+          <strong>represión sexual</strong> de una era puritana. Autores como
+          Sheridan Le Fanu, con la lesbiana <strong>Carmilla</strong> (1872),
+          exploraron ya la dimensión queer, haciendo del vampirismo un velo para
+          deseos marginados.
+        </p>
+      </section>
+
+      <!-- SECCION CINE Y CULTURA POPULAR -->
+      <section class="vampire-lore-container">
+        <h2>Cine y Cultura Popular: La Globalización del Horror</h2>
+        <p>
+          El cine y la cultura popular del siglo XX amplificaron este legado,
+          convirtiendo al vampiro en un <strong>fenómeno global</strong>. Desde
+          la icónica <em>Nosferatu</em> (1922) de Murnau —una silueta grotesca
+          que evoca el antisemitismo posbélico— hasta la sensual
+          <em>Drácula</em> de Bela Lugosi (1931), el séptimo arte lo visualizó
+          como un <strong>depredador cinematográfico</strong>. La posguerra, con
+          Hammer Films y Christopher Lee, lo erotizó aún más, mientras que los
+          80 lo punkificaron en <em>Los perdidos chicos</em> (1987). Hoy, la
+          cultura pop lo devora: series como <em>True Blood</em> (2008-2014) o
+          <em>The Vampire Diaries</em> (2009-2017) lo integran en memes, cosplay
+          y mercancía, democratizando su mística. En un ecosistema digital, el
+          vampiro se viraliza como arquetipo de la
+          <strong>adicción millennial</strong>:
+          <strong>doomscrolling eterno</strong> en la oscuridad de las redes.
+        </p>
+      </section>
+
+      <!-- SECCION VAMPIRO MODERNO -->
+      <section class="vampire-lore-container">
+        <h2>Vampiros Modernos: Reinventando el Mito en la Era Contemporánea</h2>
+        <p>
+          Los vampiros modernos, lejos del conde gótico, se reinventan en
+          <strong>híbridos poshumanos</strong>. En
+          <em>Entrevista con el vampiro</em> de Anne Rice (1976), son almas
+          torturadas en busca de redención; en <em>Twilight</em> de Stephenie
+          Meyer (2005), adolescentes relucientes que negocian amor y
+          abstinencia. Estos "vamps" contemporáneos reflejan una era de
+          <strong>identidad fluida</strong>: inmortales queer en
+          <em>What We Do in the Shadows</em> (2014), o cripto-vampiros en
+          literatura urbana que lidian con cambio climático y desigualdad. Su
+          vigencia radica en la <strong>adaptabilidad</strong>: en un mundo de
+          pandemias y crisis existenciales, el vampiro ya no es monstruo, sino
+          espejo de nuestra <strong>precariedad compartida</strong>.
+        </p>
+      </section>
+
+      <!-- SECCION ANALISIS SIMBOLICO -->
+      <section class="vampire-lore-container">
+        <h2>Análisis Simbólico: Sexualidad, Poder y Enfermedad en la Sombra</h2>
+        <p>
+          Desde un análisis simbólico, el vampiro destila tensiones profundas
+          sobre <strong>sexualidad</strong>, <strong>poder</strong> y
+          <strong>enfermedad</strong>. Sexualmente, es el mordisco como coito
+          prohibido: un intercambio de fluidos que viola tabúes, desde el
+          sadomasoquismo en <em>Entrevista</em> hasta la androginia en
+          <em>Entrevista con el vampiro</em>. Representa el poder como
+          parasitismo aristocrático —el conde que drena a la burguesía—, pero
+          también su fragilidad: el sol, el ajo, la cruz como recordatorios de
+          límites. Y en la enfermedad, es alegoría visceral: la sangre como VIH
+          en los 80, o el cáncer en Rice, encarnando la contagio lento y la
+          erosión del yo. En tiempos de COVID, su mordedura evoca cuarentenas y
+          vacunas fallidas, un recordatorio de que el vampiro siempre ha sido el
+          "otro" que nos infecta, pero también nos une en el
+          <strong>miedo</strong>.
+        </p>
+      </section>
+
+      <!-- SECCION CONCLUSION -->
+      <section class="vampire-lore-container">
+        <h2>Conclusión: Un Legado que Perdura en la No-Muerte</h2>
+        <p></p>
+        <p>
+          En conclusión, el mito vampírico no es reliquia polvorienta, sino
+          <strong>pulso vivo</strong> de la condición humana. De las tumbas
+          balcánicas a las pantallas TikTok, su legado perdura porque captura
+          nuestra <strong>sed de trascendencia</strong> en un mundo finito.
+          Fascina porque nos promete <strong>eternidad</strong> a costa de todo:
+          amor, moral, cordura. Mientras acechemos en la oscuridad —física o
+          metafórica—, el vampiro susurrará: "Bienvenido a la no-muerte". Su
+          vigencia no es casual; es nuestra <strong>sombra eterna</strong>,
+          reflejando lo que tememos y deseamos ser.
+        </p>
+      </section>
+    </article>
+    <script src="js/main.js"></script>
+  </body>
+</html>

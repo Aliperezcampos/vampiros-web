@@ -103,6 +103,10 @@ strong::after {
   height: auto; /* Asegura que crezca con el contenido */
 }
 
+.btn {
+    margin-bottom: 15px; /* espacio debajo del botón */
+}
+
 /* Estilo GIF */
 .img-fluid {
   border: 3px solid #ff6f00; /* naranja calabaza */
